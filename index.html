@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramadhan Space 2026 - Portal Ibadah Digital Terlengkap</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+
+    <!-- Fonts via Fontsource -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/poppins@5.0.13/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/amiri@5.0.2/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-wrapper">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="assets/logo.png" alt="Ramadhan Space Logo" />
+          Ramadhan<br /><span>Space</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <div class="nav-item">
+            <a href="#" class="nav-link active">Beranda</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/jadwal-imsak.html" class="nav-link"
+              >Jadwal<br />Imsak</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/doa.html" class="nav-link">Doa</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/zikir.html" class="nav-link">Zikir</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/kalkulator-zakat.html" class="nav-link"
+              >Kalkulator<br />Zakat</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/artikel.html" class="nav-link">Artikel</a>
+          </div>
+          <!-- Moved Ibadah Tracker inside nav for better mobile grouping, styled as button -->
+          <div class="nav-item">
+            <a href="/page/ibadah-tracker.html" class="nav-link btn-nav"
+              >Ibadah Tracker</a
+            >
+          </div>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div style="display: flex; align-items: center">
+          <!-- Dark Mode Toggle -->
+          <button
+            class="dark-mode-toggle"
+            onclick="toggleDarkMode()"
+            title="Mode Gelap"
+            aria-label="Toggle Dark Mode"
+          >
+            <i class="bi bi-moon-fill" id="darkModeIcon"></i>
+          </button>
+
+          <!-- Hamburger Button -->
+          <button
+            class="hamburger"
+            onclick="toggleSidebar()"
+            aria-label="Toggle Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <i class="bi bi-moon-stars-fill"></i>
+        Ramadhan Space
+      </div>
+      <nav class="sidebar-menu" id="sidebarMenu">
+        <div class="nav-item">
+          <a href="/index.html" class="nav-link active"
+            ><i class="bi bi-house"></i> Beranda</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/jadwal-imsak.html" class="nav-link"
+            ><i class="bi bi-calendar3"></i> Jadwal Imsak</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/doa.html" class="nav-link"
+            ><i class="bi bi-book"></i> Doa</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/zikir.html" class="nav-link"
+            ><i class="bi bi-brightness-low"></i> Zikir</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/kalkulator-zakat.html" class="nav-link"
+            ><i class="bi bi-calculator"></i> Kalkulator Zakat</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/artikel.html" class="nav-link"
+            ><i class="bi bi-newspaper"></i> Artikel</a
+          >
+        </div>
+        <div class="nav-item">
+          <a
+            href="/page/ibadah-tracker.html"
+            class="nav-link btn-nav"
+            style="
+              width: 100%;
+              justify-content: center;
+              margin-left: 0;
+              margin-top: 10px;
+            "
+          >
+            <i class="bi bi-calendar-event"></i> Ibadah Tracker
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-dark-mode">
+        <button class="btn-dark-mode-sidebar" onclick="toggleDarkMode()">
+          <i class="bi bi-moon-fill" id="sidebarDarkModeIcon"></i>
+          <span>Mode Gelap</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <span class="badge">🌙 Ramadhan 1447 H</span>
+          <h1>Temani Ibadah Harianmu dengan <span>Ramadhan Space</span></h1>
+          <p>
+            Portal ibadah digital terlengkap dengan jadwal shalat, doa harian,
+            zikir, kalkulator zakat, dan artikel islami dalam satu platform yang
+            mudah digunakan.
+          </p>
+          <div class="hero-buttons">
+            <a href="doa.html" class="btn-primary">
+              <i class="bi bi-book"></i>
+              Lihat Doa
+            </a>
+            <a href="#doa-preview" class="btn-secondary">
+              <i class="bi bi-moon-stars"></i>
+              Doa Hari Ini
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <img
+              src="assets/mosque.jpg"
+              alt="Ilustrasi Ramadhan"
+              class="hero-image"
+            />
+
+            <div class="floating-card card-1">
+              <span class="floating-card-icon" aria-hidden="true">
+                <i class="bi bi-moon"></i>
+              </span>
+              <div>
+                <div class="floating-card-text">Ibadah Harian</div>
+                <div class="floating-card-sub">Doa & Zikir</div>
+              </div>
+            </div>
+
+            <div class="floating-card card-2">
+              <span class="floating-card-icon" aria-hidden="true">
+                <i class="bi bi-journal-text"></i>
+              </span>
+              <div>
+                <div class="floating-card-text">Amalan Harian</div>
+                <div class="floating-card-sub">Lebih Terarah</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section class="countdown-section">
+      <div class="container countdown-container">
+        <h2 class="countdown-title">Menuju Hari Raya Idul Fitri</h2>
+        <p class="countdown-subtitle">
+          Hitung mundur menuju kemenangan setelah sebulan berpuasa
+        </p>
+
+        <div class="countdown-grid">
+          <div class="countdown-card">
+            <div class="countdown-icon">
+              <i class="bi bi-calendar3"></i>
+            </div>
+            <div class="countdown-value" id="countdownDays">00</div>
+            <div class="countdown-label">Hari</div>
+          </div>
+
+          <div class="countdown-card">
+            <div class="countdown-icon">
+              <i class="bi bi-clock"></i>
+            </div>
+            <div class="countdown-value" id="countdownHours">00</div>
+            <div class="countdown-label">Jam</div>
+          </div>
+
+          <div class="countdown-card">
+            <div class="countdown-icon">
+              <i class="bi bi-stopwatch"></i>
+            </div>
+            <div class="countdown-value" id="countdownMinutes">00</div>
+            <div class="countdown-label">Menit</div>
+          </div>
+
+          <div class="countdown-card">
+            <div class="countdown-icon">
+              <i class="bi bi-stopwatch-fill"></i>
+            </div>
+            <div class="countdown-value" id="countdownSeconds">00</div>
+            <div class="countdown-label">Detik</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION WITH CONVEYOR ANIMATION -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Fitur Unggulan</span>
+          <h2 class="section-title">Fitur Lengkap Portal Ramadhan</h2>
+          <p class="section-desc">
+            Semua yang kamu butuhkan untuk ibadah Ramadhan dalam satu platform.
+            Dari jadwal shalat hingga artikel islami, semuanya tersedia untuk
+            membantumu meraih Ramadhan terbaik.
+          </p>
+        </div>
+
+        <!-- Conveyor Belt Animation -->
+        <div class="feature-conveyor-wrapper">
+          <div class="feature-conveyor">
+            <!-- Feature 1 - Jadwal Imsak -->
+            <div class="feature-card">
+              <span class="feature-badge">Populer</span>
+              <div class="feature-icon">
+                <i class="bi bi-calendar3"></i>
+              </div>
+              <h3>Jadwal Imsakiyah</h3>
+              <p>
+                Jadwal shalat dan imsak lengkap untuk seluruh kota di Indonesia
+                dengan notifikasi waktu shalat otomatis.
+              </p>
+              <a href="/page/jadwal-imsak.html" class="feature-link">
+                Lihat Jadwal
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Feature 2 - Kumpulan Doa -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-book"></i>
+              </div>
+              <h3>Kumpulan Doa</h3>
+              <p>
+                Akses lengkap doa sahur, buka puasa, dan doa harian dengan teks
+                Arab, latin, dan artinya yang jelas.
+              </p>
+              <a href="/page/doa.html" class="feature-link">
+                Lihat Semua Doa
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Feature 3 - Hitung Zikir -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-counter"></i>
+              </div>
+              <h3>Hitung Zikir</h3>
+              <p>
+                Penghitung zikir digital dengan target harian dan statistik
+                untuk membantu konsistensi ibadah harianmu.
+              </p>
+              <a href="/page/zikir.html" class="feature-link">
+                Mulai Berzikir
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Feature 4 - Kalkulator Zakat -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-calculator"></i>
+              </div>
+              <h3>Kalkulator Zakat</h3>
+              <p>
+                Hitung zakat penghasilan, emas, dan perdagangan secara otomatis
+                berdasarkan nisab sesuai syariat.
+              </p>
+              <a href="/page/kalkulator-zakat.html" class="feature-link">
+                Hitung Zakat
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Feature 5 - Artikel -->
+            <div class="feature-card">
+              <span class="feature-badge">Baru</span>
+              <div class="feature-icon">
+                <i class="bi bi-newspaper"></i>
+              </div>
+              <h3>Artikel Islami</h3>
+              <p>
+                Ribuan artikel islami tentang keutamaan Ramadhan, tips ibadah,
+                dan kisah inspiratif para sahabat.
+              </p>
+              <a href="/page/artikel.html" class="feature-link">
+                Baca Artikel
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Feature 6 - Doa Sahur & Buka -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-moon-stars-fill"></i>
+              </div>
+              <h3>Doa Sahur & Buka</h3>
+              <p>
+                Kumpulan doa khusus untuk sahur dan berbuka puasa dengan
+                keutamaan dan waktu yang tepat.
+              </p>
+              <a href="/page/doa.html" class="feature-link">
+                Lihat Doa
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Feature 7 - Ibadah Tracker -->
+            <div class="feature-card">
+              <span class="feature-badge">Baru</span>
+              <div class="feature-icon">
+                <i class="bi bi-calendar-event"></i>
+              </div>
+              <h3>Ibadah Tracker</h3>
+              <p>
+                Catat dan pantau amalan harianmu. Mulai dari doa sederhana
+                hingga zikir harian untuk membangun kebiasaan ibadah yang lebih
+                baik.
+              </p>
+              <a href="/page/ibadah-tracker.html" class="feature-link">
+                Catat Ibadah
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Duplicate Features for Seamless Loop -->
+            <div class="feature-card">
+              <span class="feature-badge">Populer</span>
+              <div class="feature-icon">
+                <i class="bi bi-calendar3"></i>
+              </div>
+              <h3>Jadwal Imsakiyah</h3>
+              <p>
+                Jadwal shalat dan imsak lengkap untuk seluruh kota di Indonesia
+                dengan notifikasi waktu shalat otomatis.
+              </p>
+              <a href="/page/jadwal-imsak.html" class="feature-link">
+                Lihat Jadwal
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-book"></i>
+              </div>
+              <h3>Kumpulan Doa</h3>
+              <p>
+                Akses lengkap doa sahur, buka puasa, dan doa harian dengan teks
+                Arab, latin, dan artinya yang jelas.
+              </p>
+              <a href="/page/doa.html" class="feature-link">
+                Lihat Semua Doa
+                <span class="icon-circle">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="why-choose">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Mengapa Kami</span>
+          <h2 class="section-title">Keunggulan Ramadhan Space</h2>
+          <p class="section-desc">
+            Portal ibadah yang dirancang khusus untuk memudahkan ibadahmu selama
+            Ramadhan dengan fitur-fitur lengkap dan mudah digunakan.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <h3>Akses Cepat & Mudah</h3>
+            <p>
+              Interface yang sederhana dan intuitif membuat kamu bisa mengakses
+              semua fitur dengan cepat tanpa kebingungan.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h3>Konten Terpercaya</h3>
+            <p>
+              Semua konten doa, artikel, dan panduan ibadah telah diverifikasi
+              oleh ulama dan sumber terpercaya.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>
+              Dapat diakses dengan nyaman di semua perangkat, dari desktop
+              hingga smartphone, kapan saja dan di mana saja.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta">
+      <div class="container cta-box">
+        <h2>Track Ibadahmu Setiap Hari</h2>
+        <p>
+          Gunakan Ibadah Tracker untuk mencatat doa, zikir, dan amalan harian
+          agar kebiasaan ibadahmu semakin konsisten.
+        </p>
+        <a href="/page/ibadah-tracker.html" class="btn-primary">
+          <i class="bi bi-rocket"></i>
+          Buka Ibadah Tracker
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h4>
+              <i class="bi bi-moon-stars-fill"></i>
+              Ramadhan Space
+            </h4>
+            <p>
+              Portal ibadah modern untuk membantu kamu menjalani Ramadhan 2026
+              dengan lebih khusyuk dan terorganisir.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Navigasi</h4>
+            <a href="/index.html">
+              <i class="bi bi-house"></i>
+              Beranda
+            </a>
+            <a href="/page/jadwal-imsak.html"
+              ><i class="bi bi-calendar3"></i>Jadwal Imsak</a
+            >
+            <a href="doa.html">
+              <i class="bi bi-book"></i>
+              Doa
+            </a>
+            <a href="zikir.html">
+              <i class="bi bi-brightness-low"></i>
+              Zikir
+            </a>
+            <a href="kalkulator-zakat.html">
+              <i class="bi bi-calculator"></i>
+              Kalkulator Zakat
+            </a>
+            <a href="/page/artikel.html"
+              ><i class="bi bi-newspaper"></i>Artikel</a
+            >
+            <a href="/page/ibadah-tracker.html"
+              ><i class="bi bi-calendar-event"></i>Ibadah Tracker</a
+            >
+          </div>
+
+          <div class="footer-links">
+            <h4>Ikuti Kami</h4>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-instagram"></i>
+              Instagram
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-twitter-x"></i>
+              Twitter
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-facebook"></i>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-youtube"></i>
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            RENI KARTIKA SUWANDI || © 2026 Ramadhan Space. All rights reserved.
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/xyzhunnn_/"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram icon-social"></i>
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/" aria-label="Twitter">
+              <i class="bi bi-twitter-x icon-social"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/xyzhunnn_/"
+              aria-label="Facebook"
+            >
+              <i class="bi bi-facebook icon-social"></i>
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/" aria-label="YouTube">
+              <i class="bi bi-youtube icon-social"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      // COUNTDOWN TIMER
+      function updateCountdown() {
+        // Set target date to Eid al-Fitr (1 Syawal 1447 H approximately)
+        // Adjust this date based on actual Islamic calendar
+        const targetDate = new Date("2026-03-20T06:00:00"); // Example: March 20, 2026
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff > 0) {
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+          document.getElementById("countdownDays").textContent = String(
+            days
+          ).padStart(2, "0");
+          document.getElementById("countdownHours").textContent = String(
+            hours
+          ).padStart(2, "0");
+          document.getElementById("countdownMinutes").textContent = String(
+            minutes
+          ).padStart(2, "0");
+          document.getElementById("countdownSeconds").textContent = String(
+            seconds
+          ).padStart(2, "0");
+        } else {
+          // Eid has arrived
+          document.getElementById("countdownDays").textContent = "00";
+          document.getElementById("countdownHours").textContent = "00";
+          document.getElementById("countdownMinutes").textContent = "00";
+          document.getElementById("countdownSeconds").textContent = "00";
+        }
+      }
+
+      // DARK MODE
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+
+        // Update icons
+        const icons = document.querySelectorAll(
+          "#darkModeIcon, #sidebarDarkModeIcon"
+        );
+        icons.forEach((icon) => {
+          if (isDark) {
+            icon.classList.remove("bi-moon-fill");
+            icon.classList.add("bi-sun-fill");
+          } else {
+            icon.classList.remove("bi-sun-fill");
+            icon.classList.add("bi-moon-fill");
+          }
+        });
+
+        // Save preference
+        localStorage.setItem("darkMode", isDark);
+      }
+
+      // Load dark mode
+      function loadDarkMode() {
+        const isDark = localStorage.getItem("darkMode") === "true";
+        if (isDark) {
+          document.body.classList.add("dark-mode");
+          const icons = document.querySelectorAll(
+            "#darkModeIcon, #sidebarDarkModeIcon"
+          );
+          icons.forEach((icon) => {
+            icon.classList.remove("bi-moon-fill");
+            icon.classList.add("bi-sun-fill");
+          });
+        }
+      }
+
+      // SIDEBAR FUNCTIONALITY
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (sidebar && overlay && hamburger) {
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
+          hamburger.classList.toggle("active");
+
+          if (sidebar.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "";
+          }
+        }
+      }
+
+      // Close sidebar when clicking on link
+      document.querySelectorAll(".sidebar-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggleSidebar();
+        });
+      });
+
+      // Close sidebar on ESC key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          toggleSidebar();
+        }
+      });
+
+      // Navbar scroll effect
+      let lastScroll = 0;
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+
+        lastScroll = currentScroll;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Animate Stats on Scroll
+      function animateStats() {
+        const statNumbers = document.querySelectorAll(".stat-number");
+        statNumbers.forEach((stat) => {
+          const target = stat.textContent;
+          const isNumber = !isNaN(parseInt(target.replace(/\D/g, "")));
+
+          if (isNumber) {
+            let current = 0;
+            const increment = parseInt(target) / 50;
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= parseInt(target)) {
+                stat.textContent = target;
+                clearInterval(timer);
+              } else {
+                stat.textContent =
+                  Math.floor(current) + (target.includes("+") ? "+" : "");
+              }
+            }, 30);
+          }
+        });
+      }
+
+      // Trigger stats animation when section is visible
+      const statsSection = document.querySelector(".stats-section");
+      const statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateStats();
+              statsObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      if (statsSection) {
+        statsObserver.observe(statsSection);
+      }
+
+      // Load on page load
+      window.addEventListener("DOMContentLoaded", () => {
+        loadDarkMode();
+        updateCountdown();
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artikel Ramadhan - Ramadhan Space 2026</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <!-- Fonts via Fontsource -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/poppins@5.0.13/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/amiri@5.0.2/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Custom CSS -->
+    <style>
+      /* ==================== ARTICLES SECTION ==================== */
+      .articles-section {
+        padding: 80px 0;
+        background: var(--bg-secondary);
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-subtitle {
+        display: inline-block;
+        background: var(--primary-gradient);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 15px;
+      }
+
+      .section-desc {
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Article Grid */
+      .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .article-card {
+        background: var(--bg-color);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+        cursor: pointer;
+      }
+
+      .article-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--card-hover-shadow);
+      }
+
+      .article-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        background: var(--primary-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 4rem;
+        overflow: hidden;
+      }
+
+      .article-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .article-card:hover .article-image img {
+        transform: scale(1.05);
+      }
+
+      .article-content {
+        padding: 25px;
+      }
+
+      .article-category {
+        display: inline-block;
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--primary-color);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      .article-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+        line-height: 1.4;
+        transition: color 0.3s ease;
+      }
+
+      .article-card:hover .article-title {
+        color: var(--primary-color);
+      }
+
+      .article-excerpt {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+
+      .article-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .article-date {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+
+      .article-read-more {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: gap 0.3s ease;
+      }
+
+      .article-read-more:hover {
+        gap: 10px;
+      }
+
+      /* Featured Article */
+      .featured-article {
+        background: var(--bg-color);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        margin-bottom: 60px;
+        border: 1px solid var(--border-color);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .featured-article:hover {
+        box-shadow: var(--card-hover-shadow);
+      }
+
+      .featured-article-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+      }
+
+      .featured-article-image {
+        background: var(--accent-gradient);
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 6rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .featured-article-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease;
+      }
+
+      .featured-article:hover .featured-article-image img {
+        transform: scale(1.05);
+      }
+
+      .featured-article-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        z-index: 1;
+      }
+
+      .featured-article-content {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .featured-badge {
+        display: inline-block;
+        background: var(--accent-gradient);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        width: fit-content;
+      }
+
+      .featured-article h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 20px;
+        line-height: 1.3;
+        transition: color 0.3s ease;
+      }
+
+      .featured-article:hover h2 {
+        color: var(--primary-color);
+      }
+
+      .featured-article p {
+        color: var(--text-secondary);
+        margin-bottom: 30px;
+        line-height: 1.8;
+      }
+
+      .featured-article-meta {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+
+      .featured-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .btn-read-article {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--primary-gradient);
+        color: white;
+        padding: 14px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        width: fit-content;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .btn-read-article:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+      }
+
+      /* Categories Filter */
+      .categories-filter {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+      }
+
+      .category-btn {
+        padding: 10px 24px;
+        border-radius: 50px;
+        border: 2px solid var(--border-color);
+        background: var(--bg-color);
+        color: var(--text-secondary);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .category-btn:hover,
+      .category-btn.active {
+        background: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+      }
+
+      /* Newsletter Section */
+      .newsletter-section {
+        padding: 80px 0;
+        background: var(--bg-color);
+      }
+
+      .newsletter-box {
+        background: var(--primary-gradient);
+        border-radius: var(--radius-xl);
+        padding: 60px;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .newsletter-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .newsletter-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .newsletter-box h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .newsletter-box p {
+        opacity: 0.9;
+        margin-bottom: 30px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .newsletter-form {
+        display: flex;
+        gap: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .newsletter-input {
+        flex: 1;
+        padding: 15px 25px;
+        border-radius: 50px;
+        border: none;
+        font-size: 1rem;
+        font-family: inherit;
+      }
+
+      .newsletter-btn {
+        background: var(--text-primary);
+        color: var(--bg-color);
+        padding: 15px 35px;
+        border-radius: 50px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: inherit;
+      }
+
+      .newsletter-btn:hover {
+        transform: scale(1.05);
+        background: var(--bg-secondary);
+      }
+
+      /* ==================== RESPONSIVE ==================== */
+      @media (max-width: 1024px) {
+        .nav-menu {
+          display: none;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        .featured-article-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .featured-article-image {
+          min-height: 250px;
+        }
+
+        .featured-article-content {
+          padding: 30px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+
+        .newsletter-form {
+          flex-direction: column;
+        }
+
+        .article-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .page-header p {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .newsletter-box {
+          padding: 40px 20px;
+        }
+
+        .newsletter-box h2 {
+          font-size: 1.8rem;
+        }
+
+        .nav-actions {
+          gap: 8px;
+        }
+
+        .dark-mode-toggle {
+          width: 38px;
+          height: 38px;
+          font-size: 1.1rem;
+        }
+
+        .btn-nav {
+          padding: 8px 16px;
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-wrapper">
+        <!-- Logo -->
+        <a href="/index.html" class="logo">
+          <img src="/assets/logo.png" alt="Ramadhan Space Logo" />
+          Ramadhan<br /><span>Space</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <div class="nav-item">
+            <a href="/index.html" class="nav-link">Beranda</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/jadwal-imsak.html" class="nav-link"
+              >Jadwal<br />Imsak</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/doa.html" class="nav-link">Doa</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/zikir.html" class="nav-link">Zikir</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/kalkulator-zakat.html" class="nav-link"
+              >Kalkulator<br />Zakat</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/artikel.html" class="nav-link active">Artikel</a>
+          </div>
+          <!-- Moved Ibadah Tracker inside nav for better mobile grouping, styled as button -->
+          <div class="nav-item">
+            <a href="/page/ibadah-tracker.html" class="nav-link btn-nav"
+              >Ibadah Tracker</a
+            >
+          </div>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div style="display: flex; align-items: center">
+          <!-- Dark Mode Toggle -->
+          <button
+            class="dark-mode-toggle"
+            onclick="toggleDarkMode()"
+            title="Mode Gelap"
+            aria-label="Toggle Dark Mode"
+          >
+            <i class="bi bi-moon-fill" id="darkModeIcon"></i>
+          </button>
+
+          <!-- Hamburger Button -->
+          <button
+            class="hamburger"
+            onclick="toggleSidebar()"
+            aria-label="Toggle Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <i class="bi bi-moon-stars-fill"></i>
+        Ramadhan Space
+      </div>
+      <nav class="sidebar-menu" id="sidebarMenu">
+        <div class="nav-item">
+          <a href="/index.html" class="nav-link"
+            ><i class="bi bi-house"></i> Beranda</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/jadwal-imsak.html" class="nav-link"
+            ><i class="bi bi-calendar3"></i> Jadwal Imsak</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/doa.html" class="nav-link"
+            ><i class="bi bi-book"></i> Doa</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/zikir.html" class="nav-link"
+            ><i class="bi bi-brightness-low"></i> Zikir</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/kalkulator-zakat.html" class="nav-link"
+            ><i class="bi bi-calculator"></i> Kalkulator Zakat</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/artikel.html" class="nav-link active"
+            ><i class="bi bi-newspaper"></i> Artikel</a
+          >
+        </div>
+        <div class="nav-item">
+          <a
+            href="/page/ibadah-tracker.html"
+            class="nav-link btn-nav"
+            style="
+              width: 100%;
+              justify-content: center;
+              margin-left: 0;
+              margin-top: 10px;
+            "
+          >
+            <i class="bi bi-calendar-event"></i> Ibadah Tracker
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-dark-mode">
+        <button class="btn-dark-mode-sidebar" onclick="toggleDarkMode()">
+          <i class="bi bi-moon-fill" id="sidebarDarkModeIcon"></i>
+          <span>Mode Gelap</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <div class="container">
+        <span class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</span>
+
+        <h1>Artikel Ramadhan</h1>
+        <p>
+          Temukan berbagai artikel islami yang dapat menambah wawasan dan
+          semangat ibadah Anda selama bulan Ramadhan
+        </p>
+      </div>
+    </header>
+
+    <!-- ARTICLES SECTION -->
+    <section class="articles-section">
+      <div class="container">
+        <!-- Categories Filter -->
+        <div class="categories-filter">
+          <button class="category-btn active" data-category="all">Semua</button>
+          <button class="category-btn" data-category="ibadah">Ibadah</button>
+          <button class="category-btn" data-category="keutamaan">
+            Keutamaan
+          </button>
+          <button class="category-btn" data-category="tips">Tips</button>
+          <button class="category-btn" data-category="kisah">Kisah</button>
+        </div>
+
+        <!-- Featured Article -->
+        <div
+          class="featured-article"
+          onclick="window.location.href='artikel-detail.html'"
+        >
+          <div class="featured-article-grid">
+            <div class="featured-article-image">
+              <img src="/assets/artikel-7.png" alt="Keutamaan Bulan Ramadhan" />
+            </div>
+            <div class="featured-article-content">
+              <span class="featured-badge">
+                <i class="bi bi-star-fill"></i> Artikel Pilihan
+              </span>
+              <h2>10 Keutamaan Bulan Ramadhan yang Wajib Kita Ketahui</h2>
+              <p>
+                Ramadhan adalah bulan yang penuh berkah dan ampunan. Allah SWT
+                menurunkan berbagai keutamaan di bulan ini, mulai dari dibukanya
+                pintu surga, ditutupnya pintu neraka, hingga malam Lailatul
+                Qadar yang lebih baik dari seribu bulan.
+              </p>
+              <div class="featured-article-meta">
+                <div class="featured-meta-item">
+                  <i class="bi bi-calendar3 icon-primary"></i>
+                  <span>15 Maret 2026</span>
+                </div>
+                <div class="featured-meta-item">
+                  <i class="bi bi-clock icon-primary"></i>
+                  <span>8 Menit Baca</span>
+                </div>
+                <div class="featured-meta-item">
+                  <i class="bi bi-eye icon-primary"></i>
+                  <span>2.5K Dibaca</span>
+                </div>
+              </div>
+              <a
+                href="/page/artikel-detail/artikel_id_[7].html"
+                class="btn-read-article"
+                onclick="event.stopPropagation()"
+              >
+                Baca Selengkapnya
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-subtitle">
+            <i class="bi bi-collection"></i> Kumpulan Artikel
+          </span>
+          <h2 class="section-title">Artikel Terbaru</h2>
+          <p class="section-desc">
+            Temukan berbagai artikel islami yang dapat menambah wawasan dan
+            semangat ibadah Anda selama bulan Ramadhan
+          </p>
+        </div>
+
+        <!-- Article Grid -->
+        <div class="article-grid">
+          <!-- Article 1 -->
+          <div
+            class="article-card"
+            data-category="ibadah"
+            onclick="window.location.href='/page/artikel-detail/artikel_id_[7].html'"
+          >
+            <div class="article-image">
+              <img src="/assets/artikel-1.png" alt="Ibadah Tarawih" />
+            </div>
+            <div class="article-content">
+              <span class="article-category">
+                <i class="bi bi-moon-stars-fill"></i> Ibadah
+              </span>
+              <h3 class="article-title">
+                Panduan Lengkap Ibadah Tarawih di Bulan Ramadhan
+              </h3>
+              <p class="article-excerpt">
+                Sholat Tarawih adalah ibadah sunnah yang khusus dilakukan di
+                bulan Ramadhan. Simak panduan lengkap tata cara, jumlah rakaat,
+                dan keutamaannya.
+              </p>
+              <div class="article-meta">
+                <div class="article-date">
+                  <i class="bi bi-calendar3 icon-primary"></i>
+                  <span>14 Maret 2026</span>
+                </div>
+                <a
+                  href="/page/artikel-detail/artikel_id_[7].html"
+                  class="article-read-more"
+                  onclick="event.stopPropagation()"
+                >
+                  Baca <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div
+            class="article-card"
+            data-category="keutamaan"
+            onclick="window.location.href='/page/artikel-detail/artikel_id_[2].html'"
+          >
+            <div class="article-image">
+              <img src="/assets/artikel-2.png" alt="Lailatul Qadar" />
+            </div>
+            <div class="article-content">
+              <span class="article-category">
+                <i class="bi bi-star-fill"></i> Keutamaan
+              </span>
+              <h3 class="article-title">
+                Keutamaan Malam Lailatul Qadar dan Cara Meraihnya
+              </h3>
+              <p class="article-excerpt">
+                Lailatul Qadar adalah malam yang lebih baik dari seribu bulan.
+                Ketahui tanda-tanda dan amalan untuk meraih malam mulia ini.
+              </p>
+              <div class="article-meta">
+                <div class="article-date">
+                  <i class="bi bi-calendar3 icon-primary"></i>
+                  <span>13 Maret 2026</span>
+                </div>
+                <a
+                  href="/page/artikel-detail/artikel_id_[2].html"
+                  class="article-read-more"
+                  onclick="event.stopPropagation()"
+                >
+                  Baca <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div
+            class="article-card"
+            data-category="tips"
+            onclick="window.location.href='/page/artikel-detail/artikel_id_[3].html'"
+          >
+            <div class="article-image">
+              <img src="/assets/artikel-3.png" alt="Tips Kesehatan Puasa" />
+            </div>
+            <div class="article-content">
+              <span class="article-category">
+                <i class="bi bi-lightbulb-fill"></i> Tips
+              </span>
+              <h3 class="article-title">
+                7 Tips Menjaga Kesehatan Saat Berpuasa Ramadhan
+              </h3>
+              <p class="article-excerpt">
+                Puasa bukan alasan untuk mengabaikan kesehatan. Berikut tips
+                lengkap menjaga tubuh tetap sehat dan bugar selama Ramadhan.
+              </p>
+              <div class="article-meta">
+                <div class="article-date">
+                  <i class="bi bi-calendar3 icon-primary"></i>
+                  <span>12 Maret 2026</span>
+                </div>
+                <a
+                  href="/page/artikel-detail/artikel_id_[3].html"
+                  class="article-read-more"
+                  onclick="event.stopPropagation()"
+                >
+                  Baca <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 4 -->
+          <div
+            class="article-card"
+            data-category="ibadah"
+            onclick="window.location.href='/page/artikel-detail/artikel_id_[4].html'"
+          >
+            <div class="article-image">
+              <img src="/assets/artikel-4.png" alt="Al-Qur'an di Ramadhan" />
+            </div>
+            <div class="article-content">
+              <span class="article-category">
+                <i class="bi bi-journal-text"></i> Ibadah
+              </span>
+              <h3 class="article-title">
+                Keutamaan Membaca Al-Qur'an di Bulan Ramadhan
+              </h3>
+              <p class="article-excerpt">
+                Ramadhan adalah bulan Al-Qur'an. Simak keutamaan dan tips khatam
+                Al-Qur'an selama bulan suci ini.
+              </p>
+              <div class="article-meta">
+                <div class="article-date">
+                  <i class="bi bi-calendar3 icon-primary"></i>
+                  <span>11 Maret 2026</span>
+                </div>
+                <a
+                  href="/page/artikel-detail/artikel_id_[4].html"
+                  class="article-read-more"
+                  onclick="event.stopPropagation()"
+                >
+                  Baca <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 5 -->
+          <div
+            class="article-card"
+            data-category="kisah"
+            onclick="window.location.href='/page/artikel-detail/artikel_id_[5].html'"
+          >
+            <div class="article-image">
+              <img src="/assets/artikel-5.png" alt="Kisah Sahabat" />
+            </div>
+            <div class="article-content">
+              <span class="article-category">
+                <i class="bi bi-people-fill"></i> Kisah
+              </span>
+              <h3 class="article-title">
+                Kisah Inspiratif Para Sahabat di Bulan Ramadhan
+              </h3>
+              <p class="article-excerpt">
+                Belajar dari keteladanan para sahabat Nabi dalam mengisi
+                Ramadhan dengan ibadah dan amal shaleh.
+              </p>
+              <div class="article-meta">
+                <div class="article-date">
+                  <i class="bi bi-calendar3 icon-primary"></i>
+                  <span>10 Maret 2026</span>
+                </div>
+                <a
+                  href="/page/artikel-detail/artikel_id_[5].html"
+                  class="article-read-more"
+                  onclick="event.stopPropagation()"
+                >
+                  Baca <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 6 -->
+          <div
+            class="article-card"
+            data-category="tips"
+            onclick="window.location.href='/page/artikel-detail/artikel_id_[6].html'"
+          >
+            <div class="article-image">
+              <img src="/assets/artikel-6.png" alt="Zakat Fitrah" />
+            </div>
+            <div class="article-content">
+              <span class="article-category">
+                <i class="bi bi-wallet2"></i> Tips
+              </span>
+              <h3 class="article-title">
+                Panduan Lengkap Zakat Fitrah: Syarat, Nisab, dan Cara Menghitung
+              </h3>
+              <p class="article-excerpt">
+                Zakat fitrah adalah kewajiban setiap muslim di akhir Ramadhan.
+                Simak panduan lengkapnya di sini.
+              </p>
+              <div class="article-meta">
+                <div class="article-date">
+                  <i class="bi bi-calendar3 icon-primary"></i>
+                  <span>9 Maret 2026</span>
+                </div>
+                <a
+                  href="/page/artikel-detail/artikel_id_[6].html"
+                  class="article-read-more"
+                  onclick="event.stopPropagation()"
+                >
+                  Baca <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-content">
+            <h2>
+              <i class="bi bi-envelope-fill icon-white"></i>
+              Dapatkan Artikel Terbaru
+            </h2>
+            <p>
+              Berlangganan newsletter kami untuk mendapatkan update artikel
+              islami terbaru langsung ke email Anda
+            </p>
+            <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+              <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Masukkan email Anda"
+                required
+              />
+              <button type="submit" class="newsletter-btn">
+                <i class="bi bi-send-fill"></i>
+                Berlangganan
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h4>
+              <i class="bi bi-moon-stars-fill icon-primary"></i>
+              Ramadhan Space
+            </h4>
+            <p>
+              Portal ibadah modern untuk membantu kamu menjalani Ramadhan 2026
+              dengan lebih khusyuk dan terorganisir.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Navigasi</h4>
+            <a href="/index.html"><i class="bi bi-house"></i> Beranda</a>
+            <a href="/page/jadwal-imsak.html"
+              ><i class="bi bi-calendar3"></i> Jadwal Imsak</a
+            >
+            <a href="/page/doa.html"><i class="bi bi-book"></i> Doa</a>
+            <a href="/page/zikir.html"
+              ><i class="bi bi-brightness-low"></i> Zikir</a
+            >
+            <a href="/page/kalkulator-zakat.html"
+              ><i class="bi bi-calculator"></i> Kalkulator Zakat</a
+            >
+            <a href="/page/artikel.html"
+              ><i class="bi bi-newspaper"></i> Artikel</a
+            >
+            <a href="/page/ibadah-tracker.html"
+              ><i class="bi bi-calendar-event"></i> Ibadah Tracker</a
+            >
+          </div>
+          <div class="footer-links">
+            <h4>Ikuti Kami</h4>
+            <a href="https://www.instagram.com/xyzhunnn_/"
+              ><i class="bi bi-instagram icon-primary"></i> Instagram</a
+            >
+            <a href="https://www.twitter.com/"
+              ><i class="bi bi-twitter-x icon-primary"></i> Twitter</a
+            >
+            <a href="https://www.facebook.com/"
+              ><i class="bi bi-facebook icon-primary"></i> Facebook</a
+            >
+            <a href="https://www.youtube.com/"
+              ><i class="bi bi-youtube icon-primary"></i> YouTube</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            RENI KARTIKA SUWANDI || © 2026 Ramadhan Space. All rights reserved.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/xyzhunnn_/"
+              aria-label="Instagram"
+              ><i class="bi bi-instagram icon-social icon-primary"></i
+            ></a>
+            <a href="https://www.twitter.com/" aria-label="Twitter"
+              ><i class="bi bi-twitter-x icon-social icon-primary"></i
+            ></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook"
+              ><i class="bi bi-facebook icon-social icon-primary"></i
+            ></a>
+            <a href="https://www.youtube.com/" aria-label="YouTube"
+              ><i class="bi bi-youtube icon-social icon-primary"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      // DARK MODE
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+
+        // Update icons
+        const icons = document.querySelectorAll(
+          "#darkModeIcon, #sidebarDarkModeIcon"
+        );
+        icons.forEach((icon) => {
+          if (isDark) {
+            icon.classList.remove("bi-moon-fill");
+            icon.classList.add("bi-sun-fill");
+          } else {
+            icon.classList.remove("bi-sun-fill");
+            icon.classList.add("bi-moon-fill");
+          }
+        });
+
+        // Save preference
+        localStorage.setItem("darkMode", isDark);
+      }
+
+      // Load dark mode
+      function loadDarkMode() {
+        const isDark = localStorage.getItem("darkMode") === "true";
+        if (isDark) {
+          document.body.classList.add("dark-mode");
+          const icons = document.querySelectorAll(
+            "#darkModeIcon, #sidebarDarkModeIcon"
+          );
+          icons.forEach((icon) => {
+            icon.classList.remove("bi-moon-fill");
+            icon.classList.add("bi-sun-fill");
+          });
+        }
+      }
+
+      // SIDEBAR FUNCTIONAL
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (sidebar && overlay && hamburger) {
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
+          hamburger.classList.toggle("active");
+
+          if (sidebar.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "";
+          }
+        }
+      }
+
+      // Close sidebar when click on link
+      document.querySelectorAll(".sidebar-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggleSidebar();
+        });
+      });
+
+      // Close sidebar on ESC key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          toggleSidebar();
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Category Filter
+      const categoryBtns = document.querySelectorAll(".category-btn");
+      const articleCards = document.querySelectorAll(".article-card");
+
+      categoryBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Remove active class from all buttons
+          categoryBtns.forEach((b) => b.classList.remove("active"));
+          // Add active class to clicked button
+          btn.classList.add("active");
+
+          const category = btn.dataset.category;
+
+          // Filter articles
+          articleCards.forEach((card) => {
+            if (category === "all" || card.dataset.category === category) {
+              card.style.display = "block";
+              card.style.animation = "fadeIn 0.5s ease";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Newsletter Subscribe
+      function handleSubscribe(event) {
+        event.preventDefault();
+        const email = event.target.querySelector('input[type="email"]').value;
+        alert(`Terima kasih! Email ${email} telah terdaftar untuk newsletter.`);
+        event.target.reset();
+      }
+
+      // Add fadeIn animation
+      const style = document.createElement("style");
+      style.textContent = `
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+`;
+      document.head.appendChild(style);
+
+      // Load on page load
+      window.addEventListener("DOMContentLoaded", () => {
+        loadDarkMode();
+      });
+    </script>
+  </body>
+</html>

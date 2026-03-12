@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Keutamaan Membaca Al-Qur'an di Bulan Ramadhan - Ramadhan Space 2026
+    </title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+
+    <!-- Fonts via Fontsource -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/poppins@5.0.13/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/amiri@5.0.2/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Custom CSS -->
+    <style>
+      /* PAGE HEADER */
+      .page-header {
+        background: var(--gradient-primary);
+        padding: 140px 0 60px;
+        margin-top: 70px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.5;
+      }
+
+      .page-header-content {
+        position: relative;
+        z-index: 1;
+        color: var(--text-primary);
+      }
+
+      .breadcrumb {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      .breadcrumb a {
+        color: var(--text-primary);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .breadcrumb span {
+        opacity: 0.7;
+      }
+
+      /* ARTICLE CONTENT */
+      .article-main {
+        padding: 60px 0;
+        background: var(--bg-secondary);
+      }
+
+      .article-layout {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 50px;
+      }
+
+      .article-content-wrapper {
+        background: var(--bg-color);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+      }
+
+      .article-featured-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .article-body {
+        padding: 50px;
+      }
+
+      .article-category-badge {
+        display: inline-block;
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--primary-color);
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .article-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 25px;
+        line-height: 1.3;
+      }
+
+      .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 30px;
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .meta-item i {
+        color: var(--primary-color);
+      }
+
+      .article-text {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        line-height: 2;
+      }
+
+      .article-text p {
+        margin-bottom: 25px;
+      }
+
+      .article-text h2 {
+        font-size: 1.8rem;
+        color: var(--text-primary);
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid var(--primary-color);
+      }
+
+      .article-text h3 {
+        font-size: 1.4rem;
+        color: var(--text-primary);
+        margin: 30px 0 15px;
+      }
+
+      .article-text ul,
+      .article-text ol {
+        margin: 20px 0;
+        padding-left: 30px;
+      }
+
+      .article-text li {
+        margin-bottom: 12px;
+        color: var(--text-secondary);
+      }
+
+      .article-text blockquote {
+        background: var(--bg-secondary);
+        border-left: 4px solid var(--primary-color);
+        padding: 20px 30px;
+        margin: 30px 0;
+        font-style: italic;
+        color: var(--text-primary);
+        border-radius: 0 10px 10px 0;
+      }
+
+      .article-text .highlight {
+        background: rgba(16, 185, 129, 0.1);
+        padding: 20px 25px;
+        border-radius: 10px;
+        margin: 30px 0;
+        border: 1px solid var(--primary-color);
+      }
+
+      .article-text .highlight p {
+        margin-bottom: 0;
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+
+      .article-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border-color);
+        margin-top: 40px;
+      }
+
+      .tag {
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+      }
+
+      .tag:hover {
+        background: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+      }
+
+      /* Share Buttons */
+      .article-share {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 30px 50px;
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border-color);
+      }
+
+      .share-label {
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .share-buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .share-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+      }
+
+      .share-btn:hover {
+        transform: scale(1.1);
+      }
+
+      .share-btn.facebook {
+        background: #1877f2;
+      }
+
+      .share-btn.twitter {
+        background: #1da1f2;
+      }
+
+      .share-btn.whatsapp {
+        background: #25d366;
+      }
+
+      .share-btn.linkedin {
+        background: #0a66c2;
+      }
+
+      /* Author Box */
+      .author-box {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 50px;
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border-color);
+      }
+
+      .author-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--primary-color);
+      }
+
+      .author-info h4 {
+        color: var(--text-primary);
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      .author-info p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .author-social {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .author-social a {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--bg-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+      }
+
+      .author-social a:hover {
+        background: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+      }
+
+      /* SIDEBAR */
+      .article-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .sidebar-card {
+        background: var(--bg-color);
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: var(--card-shadow);
+        border: 1px solid var(--border-color);
+      }
+
+      .sidebar-card h3 {
+        font-size: 1.2rem;
+        color: var(--text-primary);
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--primary-color);
+      }
+
+      .related-article {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .related-article:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .related-article-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .related-article-info h4 {
+        font-size: 0.95rem;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+
+      .related-article-info h4 a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+      }
+
+      .related-article-info h4 a:hover {
+        color: var(--primary-color);
+      }
+
+      .related-article-date {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .toc-list {
+        list-style: none;
+      }
+
+      .toc-list li {
+        margin-bottom: 10px;
+      }
+
+      .toc-list a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: color 0.3s ease;
+        display: block;
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+
+      .toc-list a:hover {
+        color: var(--primary-color);
+        background: var(--bg-secondary);
+      }
+
+      .toc-list .toc-sub {
+        padding-left: 25px;
+        font-size: 0.9rem;
+      }
+
+      /* Comments Section */
+      .comments-section {
+        background: var(--bg-color);
+        border-radius: 20px;
+        padding: 50px;
+        margin-top: 40px;
+        box-shadow: var(--card-shadow);
+      }
+
+      .comments-section h3 {
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        margin-bottom: 30px;
+      }
+
+      .comment-form {
+        margin-bottom: 40px;
+      }
+
+      .comment-form textarea {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: 1rem;
+        resize: vertical;
+        min-height: 120px;
+        background: var(--bg-color);
+        color: var(--text-primary);
+        margin-bottom: 15px;
+      }
+
+      .comment-form textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+      }
+
+      .btn-submit {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 50px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .btn-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+      }
+
+      .comment-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .comment-item {
+        display: flex;
+        gap: 20px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .comment-item:last-child {
+        border-bottom: none;
+      }
+
+      .comment-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .comment-content {
+        flex: 1;
+      }
+
+      .comment-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .comment-author {
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .comment-date {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+
+      .comment-text {
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .comment-reply {
+        margin-top: 10px;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .comment-reply:hover {
+        text-decoration: underline;
+      }
+
+      /* Progress Bar */
+      .reading-progress {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--border-color);
+        z-index: 999;
+      }
+
+      .reading-progress-bar {
+        height: 100%;
+        background: var(--gradient-primary);
+        width: 0%;
+        transition: width 0.1s ease;
+      }
+
+      /* Back to Top */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        z-index: 998;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Icon Colors */
+      .icon-primary {
+        color: var(--primary-color);
+      }
+
+      .icon-secondary {
+        color: var(--secondary-color);
+      }
+
+      .icon-white {
+        color: white;
+      }
+
+      /* Responsive */
+      @media (max-width: 968px) {
+        .nav-menu {
+          display: none;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        .article-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .article-sidebar {
+          order: -1;
+        }
+
+        .article-body {
+          padding: 30px;
+        }
+
+        .article-title {
+          font-size: 1.8rem;
+        }
+
+        .article-featured-image {
+          height: 250px;
+        }
+
+        .article-share,
+        .author-box {
+          padding: 25px 30px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+
+        .comments-section {
+          padding: 30px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page-header {
+          padding: 100px 0 40px;
+        }
+
+        .article-title {
+          font-size: 1.5rem;
+        }
+
+        .article-meta {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .article-text {
+          font-size: 1rem;
+        }
+
+        .article-text h2 {
+          font-size: 1.4rem;
+        }
+
+        .share-buttons {
+          flex-wrap: wrap;
+        }
+
+        .author-box {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .author-social {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress">
+      <div class="reading-progress-bar" id="progressBar"></div>
+    </div>
+    <header class="navbar" id="navbar">
+      <div class="container nav-wrapper">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="/assets/logo.png" alt="Ramadhan Space Logo" />
+          Ramadhan<br /><span>Space</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <div class="nav-item">
+            <a href="#" class="nav-link">Beranda</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/jadwal-imsak.html" class="nav-link"
+              >Jadwal<br />Imsak</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/doa.html" class="nav-link">Doa</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/zikir.html" class="nav-link">Zikir</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/kalkulator-zakat.html" class="nav-link"
+              >Kalkulator<br />Zakat</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/artikel.html" class="nav-link active">Artikel</a>
+          </div>
+          <!-- Moved Ibadah Tracker inside nav for better mobile grouping, styled as button -->
+          <div class="nav-item">
+            <a href="#" class="nav-link btn-nav">Ibadah Tracker</a>
+          </div>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div style="display: flex; align-items: center">
+          <!-- Dark Mode Toggle -->
+          <button
+            class="dark-mode-toggle"
+            onclick="toggleDarkMode()"
+            title="Mode Gelap"
+            aria-label="Toggle Dark Mode"
+          >
+            <i class="bi bi-moon-fill" id="darkModeIcon"></i>
+          </button>
+
+          <!-- Hamburger Button -->
+          <button
+            class="hamburger"
+            onclick="toggleSidebar()"
+            aria-label="Toggle Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <i class="bi bi-moon-stars-fill"></i>
+        Ramadhan Space
+      </div>
+      <nav class="sidebar-menu" id="sidebarMenu">
+        <div class="nav-item">
+          <a href="/index.html" class="nav-link"
+            ><i class="bi bi-house"></i> Beranda</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/jadwal-imsak.html" class="nav-link"
+            ><i class="bi bi-calendar3"></i> Jadwal Imsak</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/doa.html" class="nav-link"
+            ><i class="bi bi-book"></i> Doa</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/zikir.html" class="nav-link"
+            ><i class="bi bi-brightness-low"></i> Zikir</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/kalkulator-zakat.html" class="nav-link"
+            ><i class="bi bi-calculator"></i> Kalkulator Zakat</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/page/artikel.html" class="nav-link active"
+            ><i class="bi bi-newspaper"></i> Artikel</a
+          >
+        </div>
+        <div class="nav-item">
+          <a
+            href="/page/ibadah-tracker.html"
+            class="nav-link btn-nav"
+            style="
+              width: 100%;
+              justify-content: center;
+              margin-left: 0;
+              margin-top: 10px;
+            "
+          >
+            <i class="bi bi-calendar-event"></i> Ibadah Tracker
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-dark-mode">
+        <button class="btn-dark-mode-sidebar" onclick="toggleDarkMode()">
+          <i class="bi bi-moon-fill" id="sidebarDarkModeIcon"></i>
+          <span>Mode Gelap</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="breadcrumb">
+          <a href="/index.html">Beranda</a>
+          <span>/</span>
+          <a href="/page/artikel.html">Artikel</a>
+          <span>/</span>
+          <span>Al-Qur'an di Ramadhan</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE MAIN -->
+    <main class="article-main">
+      <div class="container">
+        <div class="article-layout">
+          <!-- Article Content -->
+          <div class="article-content-wrapper">
+            <img
+              src="/assets/artikel-4.png"
+              alt="Al-Qur'an di Ramadhan"
+              class="article-featured-image"
+            />
+
+            <div class="article-body">
+              <span class="article-category-badge">
+                <i class="bi bi-journal-text"></i>
+                Ibadah
+              </span>
+
+              <h1 class="article-title">
+                Keutamaan Membaca Al-Qur'an di Bulan Ramadhan
+              </h1>
+
+              <div class="article-meta">
+                <div class="meta-item">
+                  <i class="bi bi-calendar3"></i>
+                  <span>11 Maret 2026</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-clock"></i>
+                  <span>9 Menit Baca</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-eye"></i>
+                  <span>3.5K Dibaca</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-person"></i>
+                  <span>Oleh: Ustadz Ahmad Fauzi</span>
+                </div>
+              </div>
+
+              <div class="article-text">
+                <p>
+                  <strong>Assalamu'alaikum Warahmatullahi Wabarakatuh.</strong>
+                  Bulan Ramadhan memiliki hubungan yang sangat istimewa dengan
+                  Al-Qur'an. Pada bulan inilah Al-Qur'an pertama kali diturunkan
+                  kepada Nabi Muhammad SAW melalui Malaikat Jibril. Oleh karena
+                  itu, membaca Al-Qur'an di bulan Ramadhan memiliki keutamaan
+                  yang sangat besar dan menjadi salah satu ibadah yang paling
+                  dianjurkan.
+                </p>
+
+                <div class="highlight">
+                  <p>
+                    <i class="bi bi-journal-text icon-primary"></i>
+                    "Bulan Ramadhan, bulan yang di dalamnya diturunkan
+                    (permulaan) Al-Qur'an sebagai petunjuk bagi manusia dan
+                    penjelasan-penjelasan mengenai petunjuk itu dan pembeda
+                    (antara yang hak dan yang batil)..." (QS. Al-Baqarah: 185)
+                  </p>
+                </div>
+
+                <h2 id="keutamaan">
+                  1. Keutamaan Membaca Al-Qur'an di Ramadhan
+                </h2>
+                <p>
+                  Membaca Al-Qur'an di bulan Ramadhan memiliki keutamaan yang
+                  luar biasa. Berikut adalah beberapa keutamaan tersebut:
+                </p>
+
+                <h3>1.1 Pahala Dilipatgandakan</h3>
+                <p>
+                  Setiap huruf yang dibaca dari Al-Qur'an akan mendapatkan
+                  pahala yang berlipat ganda di bulan Ramadhan. Rasulullah SAW
+                  bersabda:
+                </p>
+
+                <blockquote>
+                  <i class="bi bi-quote icon-primary"></i>
+                  "Barangsiapa membaca satu huruf dari Kitabullah (Al-Qur'an),
+                  maka baginya satu kebaikan, dan satu kebaikan itu dibalas
+                  sepuluh kali lipatnya." (HR. Tirmidzi)
+                </blockquote>
+
+                <p>
+                  Di bulan Ramadhan, pahala ini akan dilipatgandakan lagi sesuai
+                  dengan keutamaan bulan suci ini.
+                </p>
+
+                <h3>1.2 Al-Qur'an Akan Menjadi Syafaat</h3>
+                <p>
+                  Al-Qur'an yang kita baca di dunia akan menjadi syafaat
+                  (penolong) bagi kita di hari kiamat. Rasulullah SAW bersabda:
+                </p>
+
+                <blockquote>
+                  <i class="bi bi-quote icon-primary"></i>
+                  "Bacalah Al-Qur'an, karena sesungguhnya ia akan datang pada
+                  hari kiamat memberi syafaat kepada ahlinya." (HR. Muslim)
+                </blockquote>
+
+                <h3>1.3 Mendapatkan Ketengan Hati</h3>
+                <p>
+                  Membaca Al-Qur'an dapat memberikan ketenangan dan ketentraman
+                  hati. Allah SWT berfirman:
+                </p>
+
+                <blockquote>
+                  <i class="bi bi-quote icon-primary"></i>
+                  "(Yaitu) orang-orang yang beriman dan hati mereka menjadi
+                  tenteram dengan mengingat Allah. Ingatlah, hanya dengan
+                  mengingat Allah hati menjadi tenteram." (QS. Ar-Ra'd: 28)
+                </blockquote>
+
+                <h3>1.4 Ditinggikan Derajatnya</h3>
+                <p>
+                  Orang yang membaca dan menghafal Al-Qur'an akan ditinggikan
+                  derajatnya di sisi Allah SWT. Rasulullah SAW bersabda:
+                </p>
+
+                <blockquote>
+                  <i class="bi bi-quote icon-primary"></i>
+                  "Sesungguhnya Allah mengangkat beberapa kaum dengan Al-Qur'an
+                  ini dan merendahkan kaum yang lainnya." (HR. Muslim)
+                </blockquote>
+
+                <h2 id="tips-khatam">2. Tips Khatam Al-Qur'an di Ramadhan</h2>
+                <p>
+                  Banyak umat Muslim yang menargetkan untuk khatam (menamatkan)
+                  Al-Qur'an selama bulan Ramadhan. Berikut adalah beberapa tips
+                  untuk mencapai target tersebut:
+                </p>
+
+                <h3>2.1 Buat Target Harian yang Realistis</h3>
+                <p>
+                  Al-Qur'an memiliki 30 juz. Jika ingin khatam dalam 30 hari,
+                  targetkan membaca 1 juz per hari. Jika ingin khatam lebih
+                  cepat, tingkatkan target harian Anda.
+                </p>
+
+                <div class="highlight">
+                  <p>
+                    <i class="bi bi-calculator icon-primary"></i>
+                    <strong>Perhitungan:</strong> 1 juz = sekitar 20 halaman
+                    (mushaf standar). Jika dibaca setelah setiap sholat fardhu
+                    (5 waktu), maka setiap waktu sholat cukup membaca 4 halaman.
+                  </p>
+                </div>
+
+                <h3>2.2 Manfaatkan Waktu-Waktu Emas</h3>
+                <p>Beberapa waktu terbaik untuk membaca Al-Qur'an:</p>
+
+                <ul>
+                  <li>
+                    <i class="bi bi-sunrise-fill icon-primary"></i>
+                    <strong>Setelah Subuh:</strong> Pikiran masih segar
+                  </li>
+                  <li>
+                    <i class="bi bi-clock-fill icon-primary"></i>
+                    <strong>Menjelang Berbuka:</strong> Waktu mustajab untuk
+                    berdoa
+                  </li>
+                  <li>
+                    <i class="bi bi-moon-fill icon-primary"></i>
+                    <strong>Setelah Tarawih:</strong> Malam yang tenang
+                  </li>
+                  <li>
+                    <i class="bi bi-alarm-fill icon-primary"></i>
+                    <strong>Sahur:</strong> Waktu yang penuh berkah
+                  </li>
+                </ul>
+
+                <h3>2.3 Gunakan Aplikasi atau Mushaf Digital</h3>
+                <p>
+                  Di era digital, Anda dapat memanfaatkan aplikasi Al-Qur'an di
+                  smartphone untuk memudahkan membaca di mana saja. Namun,
+                  membaca dari mushaf fisik tetap lebih dianjurkan untuk
+                  menghindari gangguan.
+                </p>
+
+                <h3>2.4 Baca dengan Tartil</h3>
+                <p>
+                  Jangan terburu-buru dalam membaca Al-Qur'an. Bacalah dengan
+                  tartil (perlahan dan jelas) sesuai perintah Allah SWT:
+                </p>
+
+                <blockquote>
+                  <i class="bi bi-quote icon-primary"></i>
+                  "Dan bacalah Al-Qur'an itu dengan perlahan-lahan." (QS.
+                  Al-Muzzammil: 4)
+                </blockquote>
+
+                <h3>2.5 Pahami Maknanya</h3>
+                <p>
+                  Selain membaca, usahakan untuk memahami makna ayat yang
+                  dibaca. Gunakan terjemahan atau tafsir untuk memahami
+                  kandungan ayat.
+                </p>
+
+                <h2 id="jadwal">3. Contoh Jadwal Membaca Al-Qur'an</h2>
+                <p>
+                  Berikut adalah contoh jadwal membaca Al-Qur'an selama
+                  Ramadhan:
+                </p>
+
+                <div class="highlight">
+                  <p>
+                    <i class="bi bi-calendar-check icon-primary"></i>
+                    <strong>Target: 1 Juz/Hari (Khatam 30 Hari)</strong>
+                  </p>
+                </div>
+
+                <ul>
+                  <li>
+                    <i class="bi bi-sunrise-fill icon-primary"></i>
+                    <strong>Setelah Subuh:</strong> 4 halaman
+                  </li>
+                  <li>
+                    <i class="bi bi-sun-fill icon-primary"></i>
+                    <strong>Setelah Dzuhur:</strong> 4 halaman
+                  </li>
+                  <li>
+                    <i class="bi bi-sunset-fill icon-primary"></i>
+                    <strong>Setelah Ashar:</strong> 4 halaman
+                  </li>
+                  <li>
+                    <i class="bi bi-moon-stars-fill icon-primary"></i>
+                    <strong>Setelah Maghrib:</strong> 4 halaman
+                  </li>
+                  <li>
+                    <i class="bi bi-moon-fill icon-primary"></i>
+                    <strong>Setelah Isya/Tarawih:</strong> 4 halaman
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>Total: 20 halaman = 1 Juz</strong>
+                </p>
+
+                <h2 id="adab">4. Adab Membaca Al-Qur'an</h2>
+                <p>
+                  Ketika membaca Al-Qur'an, ada beberapa adab yang perlu
+                  diperhatikan:
+                </p>
+
+                <ul>
+                  <li>
+                    <i class="bi bi-check-circle-fill icon-primary"></i>
+                    Dalam keadaan suci (berwudhu)
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill icon-primary"></i>
+                    Membaca ta'awudz sebelum membaca
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill icon-primary"></i>
+                    Membaca basmalah di awal setiap surat (kecuali At-Taubah)
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill icon-primary"></i>
+                    Membaca dengan tartil dan tajwid yang benar
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill icon-primary"></i>
+                    Memahami makna yang dibaca
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill icon-primary"></i>
+                    Tidak berbicara saat membaca
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill icon-primary"></i>
+                    Menghadirkan hati dan memikirkan makna ayat
+                  </li>
+                </ul>
+
+                <h2 id="keutamaan-lain">5. Keutamaan Lain Al-Qur'an</h2>
+                <p>
+                  Selain keutamaan yang telah disebutkan, berikut adalah
+                  keutamaan lain dari Al-Qur'an:
+                </p>
+
+                <ul>
+                  <li>
+                    <i class="bi bi-star-fill icon-secondary"></i>
+                    Menjadi cahaya di hari kiamat
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill icon-secondary"></i>
+                    Menghapus dosa-dosa
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill icon-secondary"></i>
+                    Memberikan syafaat di hari kiamat
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill icon-secondary"></i>
+                    Menjadi obat bagi hati yang sakit
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill icon-secondary"></i>
+                    Menjadi petunjuk bagi kehidupan
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill icon-secondary"></i>
+                    Mendapatkan mahkota kehormatan di surga
+                  </li>
+                </ul>
+
+                <h2 id="kesimpulan">Kesimpulan</h2>
+                <p>
+                  Membaca Al-Qur'an di bulan Ramadhan adalah ibadah yang sangat
+                  mulia dan memiliki keutamaan yang luar biasa. Mari kita
+                  manfaatkan bulan suci ini untuk memperbanyak interaksi dengan
+                  Al-Qur'an, baik dengan membaca, menghafal, memahami, maupun
+                  mengamalkannya.
+                </p>
+
+                <p>
+                  Semoga Allah SWT memudahkan kita untuk khatam Al-Qur'an di
+                  bulan Ramadhan dan menjadikan Al-Qur'an sebagai syafaat bagi
+                  kita di hari kiamat.
+                </p>
+
+                <div class="highlight">
+                  <p>
+                    <i class="bi bi-hand-thumbs-up-fill icon-primary"></i>
+                    "Ya Allah, jadikanlah Al-Qur'an sebagai cahaya bagi hatiku,
+                    petunjuk bagi hidupku, dan syafaat bagiku di hari kiamat.
+                    Aamiin Ya Rabbal 'Alamiin."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="article-tags">
+                <a href="#" class="tag">#AlQuran</a>
+                <a href="#" class="tag">#Ramadhan</a>
+                <a href="#" class="tag">#KhatamQuran</a>
+                <a href="#" class="tag">#Ibadah</a>
+                <a href="#" class="tag">#Islam</a>
+                <a href="#" class="tag">#Tilawah</a>
+              </div>
+            </div>
+
+            <!-- Share Buttons -->
+            <div class="article-share">
+              <span class="share-label">
+                <i class="bi bi-share-fill icon-primary"></i>
+                Bagikan:
+              </span>
+              <div class="share-buttons">
+                <a
+                  href="#"
+                  class="share-btn facebook"
+                  onclick="shareArticle('facebook')"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a
+                  href="#"
+                  class="share-btn twitter"
+                  onclick="shareArticle('twitter')"
+                >
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a
+                  href="#"
+                  class="share-btn whatsapp"
+                  onclick="shareArticle('whatsapp')"
+                >
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+                <a
+                  href="#"
+                  class="share-btn linkedin"
+                  onclick="shareArticle('linkedin')"
+                >
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Author Box -->
+            <div class="author-box">
+              <div class="author-info">
+                <h4>Ustadz Ahmad Fauzi</h4>
+                <p>
+                  Penulis artikel islami dan dai muda. Lulusan Universitas
+                  Al-Azhar Kairo.
+                </p>
+                <div class="author-social">
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="article-sidebar">
+            <!-- Table of Contents -->
+            <div class="sidebar-card">
+              <h3>
+                <i class="bi bi-list-ul icon-primary"></i>
+                Daftar Isi
+              </h3>
+              <ul class="toc-list">
+                <li><a href="#keutamaan">1. Keutamaan Membaca</a></li>
+                <li><a href="#tips-khatam">2. Tips Khatam Al-Qur'an</a></li>
+                <li><a href="#jadwal">3. Contoh Jadwal</a></li>
+                <li><a href="#adab">4. Adab Membaca</a></li>
+                <li><a href="#keutamaan-lain">5. Keutamaan Lain</a></li>
+                <li><a href="#kesimpulan">Kesimpulan</a></li>
+              </ul>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="sidebar-card">
+              <h3>
+                <i class="bi bi-journal-text icon-primary"></i>
+                Artikel Terkait
+              </h3>
+
+              <div class="related-article">
+                <img
+                  src="/assets/artikel-7.png"
+                  alt="Keutamaan Ramadhan"
+                  class="related-article-image"
+                />
+                <div class="related-article-info">
+                  <h4>
+                    <a href="/page/artikel-detail/artikel_id_[7].html"
+                      >10 Keutamaan Bulan Ramadhan</a
+                    >
+                  </h4>
+                  <span class="related-article-date">
+                    <i class="bi bi-calendar3 icon-primary"></i>
+                    15 Maret 2026
+                  </span>
+                </div>
+              </div>
+
+              <div class="related-article">
+                <img
+                  src="/assets/artikel-1.png"
+                  alt="Tarawih"
+                  class="related-article-image"
+                />
+                <div class="related-article-info">
+                  <h4>
+                    <a href="/page/artikel-detail/artikel_id_[1].html"
+                      >Panduan Lengkap Ibadah Tarawih</a
+                    >
+                  </h4>
+                  <span class="related-article-date">
+                    <i class="bi bi-calendar3 icon-primary"></i>
+                    14 Maret 2026
+                  </span>
+                </div>
+              </div>
+
+              <div class="related-article">
+                <img
+                  src="/assets/artikel-2.png"
+                  alt="Lailatul Qadar"
+                  class="related-article-image"
+                />
+                <div class="related-article-info">
+                  <h4>
+                    <a href="/page/artikel-detail/artikel_id_[2].html"
+                      >Keutamaan Malam Lailatul Qadar</a
+                    >
+                  </h4>
+                  <span class="related-article-date">
+                    <i class="bi bi-calendar3 icon-primary"></i>
+                    13 Maret 2026
+                  </span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Comments Section -->
+        <section class="comments-section">
+          <h3>
+            <i class="bi bi-chat-dots-fill icon-primary"></i>
+            Komentar (3)
+          </h3>
+
+          <!-- Comment Form -->
+          <div class="comment-form">
+            <textarea
+              id="commentInput"
+              placeholder="Tulis komentar Anda di sini..."
+            ></textarea>
+            <button class="btn-submit" onclick="submitComment()">
+              <i class="bi bi-send-fill"></i>
+              Kirim Komentar
+            </button>
+          </div>
+
+          <!-- Comment List -->
+          <div class="comment-list" id="commentList">
+            <div class="comment-item">
+              <div class="comment-content">
+                <div class="comment-header">
+                  <span class="comment-author">Fatimah Zahra</span>
+                  <span class="comment-date">12 Maret 2026</span>
+                </div>
+                <p class="comment-text">
+                  Masya Allah, artikel yang sangat bermanfaat. Tahun ini saya
+                  targetkan khatam 2 kali di Ramadhan. Doakan saya ya!
+                </p>
+                <a href="#" class="comment-reply">
+                  <i class="bi bi-reply-fill"></i>
+                  Balas
+                </a>
+              </div>
+            </div>
+
+            <div class="comment-item">
+              <div class="comment-content">
+                <div class="comment-header">
+                  <span class="comment-author">Abdullah Rahman</span>
+                  <span class="comment-date">11 Maret 2026</span>
+                </div>
+                <p class="comment-text">
+                  Tips jadwal membaca setelah setiap sholat fardhu sangat
+                  membantu. Jadi lebih terorganisir dan target 1 juz per hari
+                  terasa lebih ringan. Jazakumullah khairan.
+                </p>
+                <a href="#" class="comment-reply">
+                  <i class="bi bi-reply-fill"></i>
+                  Balas
+                </a>
+              </div>
+            </div>
+
+            <div class="comment-item">
+              <div class="comment-content">
+                <div class="comment-header">
+                  <span class="comment-author">Khadijah Putri</span>
+                  <span class="comment-date">11 Maret 2026</span>
+                </div>
+                <p class="comment-text">
+                  Alhamdulillah, tahun lalu berhasil khatam 3 kali di Ramadhan
+                  dengan mengikuti jadwal seperti ini. Semoga tahun ini bisa
+                  lebih banyak lagi. Artikel yang sangat inspiratif!
+                </p>
+                <a href="#" class="comment-reply">
+                  <i class="bi bi-reply-fill"></i>
+                  Balas
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h4>
+              <i class="bi bi-moon-stars-fill icon-primary"></i>
+              Ramadhan Space
+            </h4>
+            <p>
+              Portal ibadah modern untuk membantu kamu menjalani Ramadhan 2026
+              dengan lebih khusyuk dan terorganisir.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Navigasi</h4>
+            <a href="#">
+              <i class="bi bi-house"></i>
+              Beranda
+            </a>
+            <a href="/page/jadwal-imsak.html"
+              ><i class="bi bi-calendar3"></i>Jadwal Imsak</a
+            >
+            <a href="doa.html">
+              <i class="bi bi-book"></i>
+              Doa
+            </a>
+            <a href="zikir.html">
+              <i class="bi bi-brightness-low"></i>
+              Zikir
+            </a>
+            <a href="kalkulator-zakat.html">
+              <i class="bi bi-calculator"></i>
+              Kalkulator Zakat
+            </a>
+            <a href="/page/artikel.html"
+              ><i class="bi bi-newspaper"></i>Artikel</a
+            >
+            <a href="/page/ibadah-tracker.html"
+              ><i class="bi bi-calendar-event"></i>Ibadah Tracker</a
+            >
+          </div>
+
+          <div class="footer-links">
+            <h4>Ikuti Kami</h4>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-instagram icon-primary"></i>
+              Instagram
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-twitter-x icon-primary"></i>
+              Twitter
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-facebook icon-primary"></i>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-youtube icon-primary"></i>
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            RENI KARTIKA SUWANDI || © 2026 Ramadhan Space. All rights reserved.
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/xyzhunnn_/"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram icon-social icon-primary"></i>
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/" aria-label="Twitter">
+              <i class="bi bi-twitter-x icon-social icon-primary"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/xyzhunnn_/"
+              aria-label="Facebook"
+            >
+              <i class="bi bi-facebook icon-social icon-primary"></i>
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/" aria-label="YouTube">
+              <i class="bi bi-youtube icon-social icon-primary"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop" title="Kembali ke Atas">
+      <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      // DARK MODE
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+
+        const icons = document.querySelectorAll(
+          "#darkModeIcon, #sidebarDarkModeIcon"
+        );
+        icons.forEach((icon) => {
+          if (isDark) {
+            icon.classList.remove("bi-moon-fill");
+            icon.classList.add("bi-sun-fill");
+          } else {
+            icon.classList.remove("bi-sun-fill");
+            icon.classList.add("bi-moon-fill");
+          }
+        });
+
+        localStorage.setItem("darkMode", isDark);
+      }
+
+      function loadDarkMode() {
+        const isDark = localStorage.getItem("darkMode") === "true";
+        if (isDark) {
+          document.body.classList.add("dark-mode");
+          const icons = document.querySelectorAll(
+            "#darkModeIcon, #sidebarDarkModeIcon"
+          );
+          icons.forEach((icon) => {
+            icon.classList.remove("bi-moon-fill");
+            icon.classList.add("bi-sun-fill");
+          });
+        }
+      }
+
+      // SIDEBAR
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (sidebar && overlay && hamburger) {
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
+          hamburger.classList.toggle("active");
+
+          if (sidebar.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "";
+          }
+        }
+      }
+
+      document.querySelectorAll(".sidebar-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggleSidebar();
+        });
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          toggleSidebar();
+        }
+      });
+
+      // Reading Progress Bar
+      function updateProgressBar() {
+        const articleBody = document.querySelector(".article-body");
+        if (!articleBody) return;
+
+        const articleTop = articleBody.offsetTop;
+        const articleHeight = articleBody.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollTop = window.scrollY;
+
+        const progress =
+          ((scrollTop - articleTop + windowHeight) / articleHeight) * 100;
+        const clampedProgress = Math.min(100, Math.max(0, progress));
+
+        document.getElementById("progressBar").style.width =
+          clampedProgress + "%";
+      }
+
+      // Back to Top Button
+      function updateBackToTop() {
+        const backToTop = document.getElementById("backToTop");
+        if (window.scrollY > 500) {
+          backToTop.classList.add("visible");
+        } else {
+          backToTop.classList.remove("visible");
+        }
+      }
+
+      // Share Article
+      function shareArticle(platform) {
+        const url = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(
+          document.querySelector(".article-title").textContent
+        );
+
+        let shareUrl = "";
+
+        switch (platform) {
+          case "facebook":
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            break;
+          case "twitter":
+            shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+            break;
+          case "whatsapp":
+            shareUrl = `https://wa.me/?text=${title}%20${url}`;
+            break;
+          case "linkedin":
+            shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            break;
+        }
+
+        if (shareUrl) {
+          window.open(shareUrl, "_blank", "width=600,height=400");
+        }
+      }
+
+      // Submit Comment
+      function submitComment() {
+        const commentInput = document.getElementById("commentInput");
+        const commentText = commentInput.value.trim();
+
+        if (!commentText) {
+          alert("Silakan tulis komentar terlebih dahulu.");
+          return;
+        }
+
+        const commentList = document.getElementById("commentList");
+        const newComment = document.createElement("div");
+        newComment.className = "comment-item";
+        newComment.innerHTML = `
+          <div class="comment-content">
+            <div class="comment-header">
+              <span class="comment-author">Pengunjung</span>
+              <span class="comment-date">${new Date().toLocaleDateString(
+                "id-ID",
+                { day: "numeric", month: "long", year: "numeric" }
+              )}</span>
+            </div>
+            <p class="comment-text">${commentText}</p>
+            <a href="#" class="comment-reply">
+              <i class="bi bi-reply-fill"></i>
+              Balas
+            </a>
+          </div>
+        `;
+
+        commentList.insertBefore(newComment, commentList.firstChild);
+        commentInput.value = "";
+        alert("Terima kasih! Komentar Anda telah dikirim.");
+      }
+
+      // Smooth scroll for TOC
+      document.querySelectorAll(".toc-list a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Event Listeners
+      window.addEventListener("scroll", () => {
+        updateProgressBar();
+        updateBackToTop();
+      });
+
+      document.getElementById("backToTop").addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Initialize
+      window.addEventListener("DOMContentLoaded", () => {
+        loadDarkMode();
+        updateProgressBar();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal Imsakiyah Ramadhan 2026 - Ramadhan Space</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <!-- Fonts via Fontsource -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/poppins@5.0.13/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/amiri@5.0.2/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <style>
+      /* ==================== PAGE HEADER ==================== */
+      /* .page-header {
+        background: var(--primary-gradient);
+        padding: 140px 0 60px;
+        margin-top: 70px;
+        position: relative;
+        overflow: hidden;
+      } */
+
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.5;
+      }
+
+      /* .page-header-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: white;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .page-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .breadcrumb {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .breadcrumb a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      */
+
+      /* ==================== SCHEDULE SECTION ==================== */
+      .schedule-section {
+        padding: 60px 0;
+        background: var(--bg-color);
+      }
+
+      .schedule-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .location-selector {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--card-bg);
+        border: 1.5px solid var(--border-color);
+        padding: 12px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        color: var(--text-main);
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .location-selector:hover {
+        border-color: var(--primary-color);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+      }
+
+      .location-selector select {
+        background: transparent;
+        border: none;
+        color: var(--text-main);
+        font-size: 0.9rem;
+        cursor: pointer;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+        min-width: 200px;
+      }
+
+      .date-badge {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--card-bg);
+        border: 1.5px solid var(--border-color);
+        padding: 12px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        color: var(--text-main);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .action-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1.5px solid var(--border-color);
+        background: var(--card-bg);
+        color: var(--text-main);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        transition: var(--transition);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .action-btn:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-2px) scale(1.06);
+        box-shadow: var(--shadow-md);
+      }
+
+      /* ==================== CARDS GRID ==================== */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 25px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: 25px;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+      }
+
+      .card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-5px);
+        border-color: rgba(16, 185, 129, 0.25);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .card-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.375rem;
+        transition: var(--transition);
+      }
+
+      .card:hover .card-icon {
+        transform: scale(1.12) rotate(6deg);
+      }
+
+      .card-title h3 {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 5px;
+      }
+
+      .card-title p {
+        font-size: 0.8125rem;
+        color: var(--text-muted);
+      }
+
+      /* NEXT PRAYER CARD */
+      .next-prayer-card {
+        background: var(--primary-gradient);
+        color: white;
+        position: relative;
+        overflow: hidden;
+        border: none;
+      }
+
+      .next-prayer-card .card-title h3,
+      .next-prayer-card .card-title p {
+        color: white;
+      }
+
+      .next-prayer-card .card-icon {
+        background: rgba(255, 255, 255, 0.18);
+        color: var(--accent-color);
+        border: 1px solid rgba(245, 158, 11, 0.35);
+      }
+
+      .next-prayer-name {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1.75px;
+        margin-bottom: 10px;
+      }
+      .next-prayer-time {
+        font-family: "Poppins", sans-serif;
+        font-size: 4.5rem;
+        font-weight: 800;
+        color: var(--accent-400);
+        letter-spacing: -2px;
+        margin: 20px 0 25px;
+        line-height: 1;
+
+        text-align: center; /* ini yang membuat jam ke tengah */
+      }
+      .countdown-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .countdown-item {
+        text-align: center;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(18px);
+        border-radius: 18px;
+        transition: var(--transition);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .countdown-item:hover {
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateY(-3px);
+        border-color: rgba(245, 158, 11, 0.35);
+      }
+
+      .countdown-value {
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent-color);
+        line-height: 1;
+        text-shadow: 0 0 18px rgba(245, 158, 11, 0.45);
+      }
+
+      .countdown-label {
+        font-size: 0.625rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 0.875px;
+        margin-top: 7px;
+        font-weight: 600;
+      }
+
+      /* PRAYER TIMES CARD */
+      .prayer-times-card {
+        background: var(--card-bg);
+      }
+
+      .prayer-times-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .prayer-item {
+        background: var(--bg-color);
+        border: 1.5px solid var(--border-color);
+        border-radius: 18px;
+        padding: 15px 10px;
+        text-align: center;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .prayer-item:hover {
+        border-color: var(--primary-color);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .prayer-item.active {
+        background: var(--primary-100);
+        border-color: var(--accent-color);
+      }
+
+      body.dark-mode .prayer-item.active {
+        background: rgba(16, 185, 129, 0.1);
+      }
+
+      .prayer-icon {
+        font-size: 1.625rem;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .prayer-name {
+        color: var(--text-muted);
+        font-size: 0.625rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.625px;
+        margin-bottom: 10px;
+      }
+
+      .prayer-time {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--text-main);
+        transition: var(--transition);
+      }
+
+      .prayer-item:hover .prayer-time {
+        transform: scale(1.12);
+        color: var(--accent-color);
+      }
+
+      .prayer-item.active .prayer-time {
+        color: var(--accent-color);
+        text-shadow: 0 0 18px rgba(245, 158, 11, 0.45);
+      }
+
+      /* INFO CARD */
+      .info-card {
+        background: var(--card-bg);
+      }
+
+      .info-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .info-stat {
+        text-align: center;
+        padding: 15px;
+        background: var(--bg-color);
+        border-radius: 18px;
+        transition: var(--transition);
+        border: 1.5px solid var(--border-color);
+      }
+
+      .info-stat:hover {
+        background: var(--primary-100);
+        transform: scale(1.06);
+        border-color: var(--primary-color);
+      }
+
+      body.dark-mode .info-stat:hover {
+        background: rgba(16, 185, 129, 0.1);
+      }
+
+      .info-stat-value {
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+      }
+
+      .info-stat-label {
+        font-size: 0.625rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.625px;
+        font-weight: 700;
+      }
+
+      .quran-verse {
+        font-style: italic;
+        line-height: 1.75;
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        margin-bottom: 10px;
+        font-family: "Amiri", serif;
+        padding-left: 15px;
+        border-left: 2.5px solid var(--accent-color);
+      }
+
+      .quran-reference {
+        display: block;
+        text-align: right;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-weight: 600;
+        font-family: "Amiri", serif;
+      }
+
+      /* ==================== SCHEDULE TABLE ==================== */
+      .schedule-card {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: 25px;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+      }
+
+      .schedule-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1.5px solid var(--border-color);
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .schedule-title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .schedule-title-main {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .schedule-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.375rem;
+        background: var(--primary-100);
+        color: var(--primary-color);
+        border: 1.5px solid rgba(16, 185, 129, 0.25);
+      }
+
+      body.dark-mode .schedule-icon {
+        background: rgba(16, 185, 129, 0.1);
+      }
+
+      .schedule-title h3 {
+        font-size: 1.3125rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 0;
+      }
+
+      .schedule-subtitle {
+        font-size: 0.8125rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .month-badge {
+        background: var(--primary-100);
+        color: var(--primary-color);
+        padding: 5px 12px;
+        border-radius: 50px;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        border: 1.5px solid rgba(16, 185, 129, 0.25);
+        text-transform: uppercase;
+        letter-spacing: 0.4375px;
+      }
+
+      body.dark-mode .month-badge {
+        background: rgba(16, 185, 129, 0.1);
+      }
+
+      .schedule-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .schedule-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 10px;
+        background: var(--bg-color);
+        border-radius: 12px;
+        border: 1.5px solid var(--border-color);
+        transition: var(--transition);
+      }
+
+      .schedule-meta-item:hover {
+        background: var(--primary-100);
+        border-color: var(--primary-color);
+        transform: translateY(-2px);
+      }
+
+      body.dark-mode .schedule-meta-item:hover {
+        background: rgba(16, 185, 129, 0.1);
+      }
+
+      .schedule-meta-item i {
+        color: var(--primary-color);
+        font-size: 0.9375rem;
+      }
+
+      .schedule-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .search-input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--bg-color);
+        border: 1.5px solid var(--border-color);
+        padding: 10px 15px;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        color: var(--text-main);
+        transition: var(--transition);
+        min-width: 200px;
+      }
+
+      .search-input:focus-within {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px var(--primary-100);
+        transform: translateY(-2px);
+      }
+
+      body.dark-mode .search-input:focus-within {
+        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+      }
+
+      .search-input input {
+        background: transparent;
+        border: none;
+        color: var(--text-main);
+        font-size: 0.875rem;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+        width: 100%;
+      }
+
+      .search-input input::placeholder {
+        color: var(--text-muted);
+      }
+
+      .export-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--primary-gradient);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+      }
+
+      .export-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 22px rgba(16, 185, 129, 0.45);
+      }
+
+      .table-container {
+        overflow-x: auto;
+        width: 100%;
+      }
+
+      #scheduleTable {
+        min-width: 900px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead {
+        background: var(--primary-gradient);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      th {
+        padding: 15px 12px;
+        color: white;
+        font-weight: 700;
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.875px;
+        text-align: left;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+      }
+
+      th:first-child {
+        width: 28%;
+      }
+
+      th:nth-child(2),
+      th:nth-child(3),
+      th:nth-child(4),
+      th:nth-child(5),
+      th:nth-child(6),
+      th:nth-child(7) {
+        width: 13.66%;
+        text-align: center;
+      }
+
+      td {
+        padding: 15px 12px;
+        border-bottom: 1.5px solid var(--border-color);
+        color: var(--text-main);
+        font-size: 0.875rem;
+        position: relative;
+      }
+
+      tbody tr {
+        background: var(--card-bg);
+        transition: var(--transition);
+      }
+
+      tbody tr:hover td {
+        background: var(--primary-100);
+      }
+
+      body.dark-mode tbody tr:hover td {
+        background: rgba(16, 185, 129, 0.1);
+      }
+
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .today-row {
+        background: var(--primary-100) !important;
+        border-left: 3.5px solid var(--primary-color);
+      }
+
+      body.dark-mode .today-row {
+        background: rgba(16, 185, 129, 0.1) !important;
+      }
+
+      .today-badge {
+        background: var(--primary-gradient);
+        color: var(--primary-gradient);
+        padding: 3px 10px;
+        border-radius: 50px;
+        font-size: 0.5625rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.625px;
+        margin-left: 10px;
+        box-shadow: 0 0 14px rgba(16, 185, 129, 0.55);
+      }
+
+      .time-cell {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        color: var(--accent-color);
+        text-align: center;
+      }
+
+      .time-cell.current {
+        color: var(--primary-color);
+        text-shadow: 0 0 14px rgba(16, 185, 129, 0.55);
+      }
+
+      /* ==================== RESPONSIVE ==================== */
+      @media (max-width: 968px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+        .prayer-times-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .info-stats {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .next-prayer-time {
+          font-size: 2.5rem;
+        }
+        .schedule-header {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .schedule-actions {
+          width: 100%;
+          flex-wrap: wrap;
+        }
+        .search-input {
+          flex: 1;
+          min-width: 100%;
+        }
+        .nav-menu {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+        .page-header p {
+          font-size: 1rem;
+        }
+        .prayer-times-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .countdown-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+        .countdown-value {
+          font-size: 1.625rem;
+        }
+        .next-prayer-time {
+          font-size: 2rem;
+        }
+        .info-stat-value {
+          font-size: 1.625rem;
+        }
+        th,
+        td {
+          padding: 12px 8px;
+          font-size: 0.8125rem;
+        }
+        .schedule-meta {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+
+      /* ==================== NOTIFICATION TOAST ==================== */
+      .notification-toast {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--card-bg);
+        border: 1.5px solid var(--border-color);
+        border-radius: 18px;
+        padding: 15px 20px;
+        box-shadow: var(--shadow-lg);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        z-index: 1000;
+        transform: translateX(140%);
+        transition: transform 0.35s ease;
+        max-width: 380px;
+      }
+
+      .notification-toast.show {
+        transform: translateX(0);
+      }
+
+      .notification-toast.success {
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .notification-icon {
+        font-size: 1.625rem;
+        color: var(--primary-color);
+      }
+
+      .notification-content {
+        flex: 1;
+      }
+
+      .notification-title {
+        font-weight: 700;
+        font-size: 0.875rem;
+        color: var(--text-main);
+        margin-bottom: 3px;
+      }
+
+      .notification-message {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .notification-close {
+        background: none;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+        color: var(--text-muted);
+        transition: var(--transition);
+        width: 30px;
+        height: 30px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .notification-close:hover {
+        color: var(--text-main);
+        transform: scale(1.18) rotate(90deg);
+        background: var(--bg-color);
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .loading-spinner {
+        width: 42px;
+        height: 42px;
+        border: 3px solid var(--border-color);
+        border-top-color: var(--primary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 15px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .state-container {
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .state-title {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 5px;
+      }
+
+      .state-text {
+        color: var(--text-muted);
+        font-size: 0.8125rem;
+        margin-bottom: 20px;
+      }
+
+      .btn-retry {
+        background: var(--primary-gradient);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: var(--transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+      }
+
+      .btn-retry:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 22px rgba(16, 185, 129, 0.45);
+      }
+    </style>
+  </head>
+  <body>
+    <!--   NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-wrapper">
+        <!-- Logo -->
+        <a href="/index.html" class="logo">
+          <img src="/assets/logo.png" alt="Ramadhan Space Logo" />
+          Ramadhan<br /><span>Space</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <div class="nav-item">
+            <a href="/index.html" class="nav-link">Beranda</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/jadwal-imsak.html" class="nav-link active"
+              >Jadwal<br />Imsak</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/doa.html" class="nav-link">Doa</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/zikir.html" class="nav-link">Zikir</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/kalkulator-zakat.html" class="nav-link"
+              >Kalkulator<br />Zakat</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/artikel.html" class="nav-link">Artikel</a>
+          </div>
+          <div class="nav-item">
+            <a href="/page/ibadah-tracker.html" class="nav-link btn-nav"
+              >Ibadah Tracker</a
+            >
+          </div>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div style="display: flex; align-items: center">
+          <!-- Dark Mode Toggle -->
+          <button
+            class="dark-mode-toggle"
+            onclick="toggleDarkMode()"
+            title="Mode Gelap"
+            aria-label="Toggle Dark Mode"
+          >
+            <i class="bi bi-moon-fill" id="darkModeIcon"></i>
+          </button>
+
+          <!-- Hamburger Button -->
+          <button
+            class="hamburger"
+            onclick="toggleSidebar()"
+            aria-label="Toggle Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+          <i class="bi bi-moon-stars-fill"></i>
+          Ramadhan Space
+        </div>
+        <nav class="sidebar-menu" id="sidebarMenu">
+          <div class="nav-item">
+            <a href="/index.html" class="nav-link"
+              ><i class="bi bi-house"></i> Beranda</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/jadwal-imsak.html" class="nav-link active
+              ><i class="bi bi-calendar3"></i> Jadwal Imsak</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/doa.html" class="nav-link"
+              ><i class="bi bi-book"></i> Doa</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/zikir.html" class="nav-link"
+              ><i class="bi bi-brightness-low"></i> Zikir</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/kalkulator-zakat.html" class="nav-link"
+              ><i class="bi bi-calculator"></i> Kalkulator Zakat</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/page/artikel.html" class="nav-link"
+              ><i class="bi bi-newspaper"></i> Artikel</a
+            >
+          </div>
+          <div class="nav-item">
+            <a
+              href="/page/ibadah-tracker.html"
+              class="nav-link btn-nav"
+              style="
+                width: 100%;
+                justify-content: center;
+                margin-left: 0;
+                margin-top: 10px;
+              "
+            >
+              <i class="bi bi-calendar-event"></i> Ibadah Tracker
+            </a>
+          </div>
+        </nav>
+        <div class="sidebar-dark-mode">
+          <button class="btn-dark-mode-sidebar" onclick="toggleDarkMode()">
+            <i class="bi bi-moon-fill" id="sidebarDarkModeIcon"></i>
+            <span>Mode Gelap</span>
+          </button>
+        </div>
+      </aside>
+
+    <!-- PAGE HEADER -->
+
+    <header class="page-header">
+      <div class="container">
+        <span class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</span>
+
+        <h1>Jadwal Imsakiyah Ramadhan</h1>
+        <p>Pantau jadwal sholat Ramadhan di kota pilihan Anda</p>
+      </div>
+    </header>
+
+    <!-- SCHEDULE SECTION -->
+    <section class="schedule-section">
+      <div class="container">
+        <!-- Schedule Controls -->
+        <div class="schedule-controls">
+          <div class="location-selector">
+            <i class="bi bi-geo-alt-fill icon-primary"></i>
+            <select id="citySelect">
+              <option value="">Pilih Kota</option>
+            </select>
+          </div>
+          <div class="date-badge">
+            <i class="bi bi-calendar-event icon-primary"></i>
+            <span id="currentDay">-</span>
+          </div>
+          <button class="action-btn" id="darkModeBtn" title="Toggle Theme">
+            <i class="bi bi-sun"></i>
+          </button>
+          <button class="action-btn" id="notifBtn" title="Notifikasi">
+            <i class="bi bi-bell"></i>
+          </button>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid">
+          <!-- Next Prayer Card -->
+          <div class="card next-prayer-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="bi bi-sunrise-fill"></i>
+              </div>
+              <div class="card-title">
+                <h3>Sholat Berikutnya</h3>
+                <p id="nextPrayerName">-</p>
+              </div>
+            </div>
+            <div class="next-prayer-time" id="nextPrayerTime">--:--</div>
+            <div class="countdown-grid">
+              <div class="countdown-item">
+                <div class="countdown-value" id="countdownHours">00</div>
+                <div class="countdown-label">Jam</div>
+              </div>
+              <div class="countdown-item">
+                <div class="countdown-value" id="countdownMinutes">00</div>
+                <div class="countdown-label">Menit</div>
+              </div>
+              <div class="countdown-item">
+                <div class="countdown-value" id="countdownSeconds">00</div>
+                <div class="countdown-label">Detik</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prayer Times & Info Cards Row -->
+          <div
+            class="cards-grid"
+            style="grid-template-columns: 1.4fr 1fr; gap: 25px"
+          >
+            <!-- Prayer Times Card -->
+            <div class="card prayer-times-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="bi bi-mosque-fill icon-primary"></i>
+                </div>
+                <div class="card-title">
+                  <h3>Waktu Sholat Hari Ini</h3>
+                  <p id="todayDisplay">-</p>
+                </div>
+              </div>
+              <div class="prayer-times-grid">
+                <div class="prayer-item">
+                  <i class="bi bi-moon-stars prayer-icon icon-primary"></i>
+                  <div class="prayer-name">Imsak</div>
+                  <div class="prayer-time" id="timeImsak">--:--</div>
+                </div>
+                <div class="prayer-item">
+                  <i
+                    class="bi bi-sunrise prayer-icon"
+                    style="color: var(--secondary-color)"
+                  ></i>
+                  <div class="prayer-name">Subuh</div>
+                  <div class="prayer-time" id="timeSubuh">--:--</div>
+                </div>
+                <div class="prayer-item active">
+                  <i
+                    class="bi bi-sun prayer-icon"
+                    style="color: var(--secondary-color)"
+                  ></i>
+                  <div class="prayer-name">Dzuhur</div>
+                  <div class="prayer-time" id="timeDzuhur">--:--</div>
+                </div>
+                <div class="prayer-item">
+                  <i class="bi bi-cloud-sun prayer-icon icon-primary"></i>
+                  <div class="prayer-name">Ashar</div>
+                  <div class="prayer-time" id="timeAshar">--:--</div>
+                </div>
+                <div class="prayer-item">
+                  <i
+                    class="bi bi-sunset prayer-icon"
+                    style="color: var(--secondary-color)"
+                  ></i>
+                  <div class="prayer-name">Maghrib</div>
+                  <div class="prayer-time" id="timeMaghrib">--:--</div>
+                </div>
+                <div class="prayer-item">
+                  <i class="bi bi-moon-fill prayer-icon icon-primary"></i>
+                  <div class="prayer-name">Isya</div>
+                  <div class="prayer-time" id="timeIsya">--:--</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Info Card -->
+            <div class="card info-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="bi bi-journal-bookmark-fill icon-primary"></i>
+                </div>
+                <div class="card-title">
+                  <h3>Info Ramadhan</h3>
+                  <p>Hari Ke-20</p>
+                </div>
+              </div>
+              <div class="info-stats">
+                <div class="info-stat">
+                  <div class="info-stat-value" id="infoDay">20</div>
+                  <div class="info-stat-label">Hari Ke</div>
+                </div>
+                <div class="info-stat">
+                  <div class="info-stat-value" id="infoTomorrow">21</div>
+                  <div class="info-stat-label">Besok</div>
+                </div>
+                <div class="info-stat">
+                  <div class="info-stat-value" id="infoRemaining">10</div>
+                  <div class="info-stat-label">Sisa Hari</div>
+                </div>
+              </div>
+              <p class="quran-verse">
+                "Diwajibkan atas kamu berpuasa di bulan Ramadhan agar kamu
+                bertakwa."
+              </p>
+              <span class="quran-reference">QS. Al-Baqarah 185</span>
+            </div>
+          </div>
+
+          <!-- Schedule Table Card -->
+          <div class="schedule-card">
+            <div class="schedule-header">
+              <div class="schedule-title">
+                <div class="schedule-title-main">
+                  <div class="schedule-icon">
+                    <i class="bi bi-calendar3-week"></i>
+                  </div>
+                  <div>
+                    <h3>Jadwal Imsakiyah</h3>
+                    <div class="schedule-subtitle">
+                      <span id="scheduleLocation">-</span>
+                      <span class="month-badge">
+                        <i class="bi bi-calendar-month"></i>
+                        <span id="monthYear">Maret 2026</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-meta">
+                  <div class="schedule-meta-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span id="metaLocation">Kab. Solok</span>
+                  </div>
+                  <div class="schedule-meta-item">
+                    <i class="bi bi-clock"></i>
+                    <span id="metaTimezone">WIB</span>
+                  </div>
+                  <div class="schedule-meta-item">
+                    <i class="bi bi-calendar-range"></i>
+                    <span id="metaDays">30 Hari</span>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-actions">
+                <div class="search-input">
+                  <i class="bi bi-search" style="color: var(--text-muted)"></i>
+                  <input
+                    type="text"
+                    id="searchDate"
+                    placeholder="Cari tanggal..."
+                  />
+                </div>
+                <button class="export-btn" id="exportBtn">
+                  <i class="bi bi-download"></i>
+                  <span>Export</span>
+                </button>
+              </div>
+            </div>
+            <div class="table-container">
+              <div class="state-container hidden" id="loadingState">
+                <div class="loading-spinner"></div>
+                <h3 class="state-title">Memuat data jadwal...</h3>
+                <button class="btn-retry" id="retryBtn">
+                  <i class="bi bi-arrow-clockwise"></i> Coba Lagi
+                </button>
+              </div>
+              <table id="scheduleTable">
+                <thead>
+                  <tr>
+                    <th>Tanggal</th>
+                    <th>Imsak</th>
+                    <th>Subuh</th>
+                    <th>Dzuhur</th>
+                    <th>Ashar</th>
+                    <th>Maghrib</th>
+                    <th>Isya</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h4>
+              <i class="bi bi-moon-stars-fill icon-primary"></i>
+              Ramadhan Space
+            </h4>
+            <p>
+              Portal ibadah modern untuk membantu kamu menjalani Ramadhan 2026
+              dengan lebih khusyuk dan terorganisir.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Navigasi</h4>
+            <a href="/index.html">
+              <i class="bi bi-house"></i>
+              Beranda
+            </a>
+            <a href="/page/jadwal-imsak.html"
+              ><i class="bi bi-calendar3"></i>Jadwal Imsak</a
+            >
+            <a href="doa.html">
+              <i class="bi bi-book"></i>
+              Doa
+            </a>
+            <a href="zikir.html">
+              <i class="bi bi-brightness-low"></i>
+              Zikir
+            </a>
+            <a href="kalkulator-zakat.html">
+              <i class="bi bi-calculator"></i>
+              Kalkulator Zakat
+            </a>
+            <a href="/page/artikel.html"
+              ><i class="bi bi-newspaper"></i>Artikel</a
+            >
+            <a href="/page/ibadah-tracker.html"
+              ><i class="bi bi-calendar-event"></i>Ibadah Tracker</a
+            >
+          </div>
+
+          <div class="footer-links">
+            <h4>Ikuti Kami</h4>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-instagram icon-primary"></i>
+              Instagram
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-twitter-x icon-primary"></i>
+              Twitter
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-facebook icon-primary"></i>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/">
+              <i class="bi bi-youtube icon-primary"></i>
+              YouTube
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            RENI KARTIKA SUWANDI || © 2026 Ramadhan Space. All rights reserved.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/xyzhunnn_/"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram icon-social icon-primary"></i>
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/" aria-label="Twitter">
+              <i class="bi bi-twitter-x icon-social icon-primary"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/xyzhunnn_/"
+              aria-label="Facebook"
+            >
+              <i class="bi bi-facebook icon-social icon-primary"></i>
+            </a>
+            <a href="https://www.instagram.com/xyzhunnn_/" aria-label="YouTube">
+              <i class="bi bi-youtube icon-social icon-primary"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div class="notification-toast" id="notificationToast">
+      <span class="notification-icon">
+        <i class="bi bi-bell-fill"></i>
+      </span>
+      <div class="notification-content">
+        <div class="notification-title">Waktu Sholat</div>
+        <div class="notification-message">Waktu sholat telah tiba</div>
+      </div>
+      <button class="notification-close" id="notificationClose">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      const API_BASE = "https://api.myquran.com/v2";
+      const API_CITIES = `${API_BASE}/sholat/kota/semua`;
+
+      // DOM Elements
+      const citySelect = document.getElementById("citySelect");
+      const currentDay = document.getElementById("currentDay");
+      const todayDisplay = document.getElementById("todayDisplay");
+      const scheduleLocation = document.getElementById("scheduleLocation");
+      const metaLocation = document.getElementById("metaLocation");
+      const monthYear = document.getElementById("monthYear");
+      const nextPrayerName = document.getElementById("nextPrayerName");
+      const nextPrayerTime = document.getElementById("nextPrayerTime");
+      const countdownHours = document.getElementById("countdownHours");
+      const countdownMinutes = document.getElementById("countdownMinutes");
+      const countdownSeconds = document.getElementById("countdownSeconds");
+      const infoDay = document.getElementById("infoDay");
+      const infoTomorrow = document.getElementById("infoTomorrow");
+      const infoRemaining = document.getElementById("infoRemaining");
+      const loadingState = document.getElementById("loadingState");
+      const scheduleTable = document.getElementById("scheduleTable");
+      const tableBody = document.getElementById("tableBody");
+      const retryBtn = document.getElementById("retryBtn");
+      const darkModeBtn = document.getElementById("darkModeBtn");
+      const notifBtn = document.getElementById("notifBtn");
+      const notificationToast = document.getElementById("notificationToast");
+      const notificationClose = document.getElementById("notificationClose");
+      const searchDate = document.getElementById("searchDate");
+      const exportBtn = document.getElementById("exportBtn");
+      const prayerTimes = {
+        imsak: document.getElementById("timeImsak"),
+        subuh: document.getElementById("timeSubuh"),
+        dzuhur: document.getElementById("timeDzuhur"),
+        ashar: document.getElementById("timeAshar"),
+        maghrib: document.getElementById("timeMaghrib"),
+        isya: document.getElementById("timeIsya"),
+      };
+
+      let cities = [];
+      let currentCityId = null;
+      let currentSchedule = null;
+      let isDarkMode = localStorage.getItem("darkMode") !== "light";
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", () => {
+        applyDarkMode();
+        updateDateDisplay();
+        updateStats();
+        loadCities();
+        setupEventListeners();
+        startCountdown();
+      });
+
+      // Navbar Scroll Effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Dark Mode
+      function applyDarkMode() {
+        if (isDarkMode) {
+          document.body.classList.remove("dark-mode");
+          darkModeBtn.innerHTML = '<i class="bi bi-sun"></i>';
+        } else {
+          document.body.classList.add("dark-mode");
+          darkModeBtn.innerHTML = '<i class="bi bi-moon"></i>';
+        }
+      }
+
+      function toggleDarkMode() {
+        isDarkMode = !isDarkMode;
+        localStorage.setItem("darkMode", isDarkMode ? "dark" : "light");
+        applyDarkMode();
+        showNotification(
+          "Mode Tema",
+          isDarkMode ? "Mode Gelap Diaktifkan" : "Mode Terang Diaktifkan",
+          "success"
+        );
+      }
+
+      // Notification
+      function showNotification(title, message, type = "success") {
+        notificationToast.querySelector(".notification-title").textContent =
+          title;
+        notificationToast.querySelector(".notification-message").textContent =
+          message;
+        notificationToast.className = `notification-toast ${type} show`;
+        setTimeout(() => notificationToast.classList.remove("show"), 4000);
+      }
+
+      // Date Display
+      function updateDateDisplay() {
+        const now = new Date();
+        const days = [
+          "Minggu",
+          "Senin",
+          "Selasa",
+          "Rabu",
+          "Kamis",
+          "Jumat",
+          "Sabtu",
+        ];
+        const months = [
+          "Januari",
+          "Februari",
+          "Maret",
+          "April",
+          "Mei",
+          "Juni",
+          "Juli",
+          "Agustus",
+          "September",
+          "Oktober",
+          "November",
+          "Desember",
+        ];
+        currentDay.textContent = `${days[now.getDay()]}, ${now.getDate()} ${
+          months[now.getMonth()]
+        }`;
+        todayDisplay.textContent = `${days[now.getDay()]}, ${now.getDate()} ${
+          months[now.getMonth()]
+        } ${now.getFullYear()}`;
+        monthYear.textContent = `${
+          months[now.getMonth()]
+        } ${now.getFullYear()}`;
+      }
+
+      // Stats
+      function updateStats() {
+        infoDay.textContent = "20";
+        infoTomorrow.textContent = "21";
+        infoRemaining.textContent = "10";
+      }
+
+      // Event Listeners
+      function setupEventListeners() {
+        citySelect.addEventListener("change", handleCityChange);
+        retryBtn.addEventListener("click", handleRetry);
+        darkModeBtn.addEventListener("click", toggleDarkMode);
+        notifBtn.addEventListener("click", requestNotificationPermission);
+        notificationClose.addEventListener("click", () =>
+          notificationToast.classList.remove("show")
+        );
+        searchDate.addEventListener("input", handleSearch);
+        exportBtn.addEventListener("click", handleExport);
+      }
+
+      // Load Cities
+      async function loadCities() {
+        loadingState.classList.remove("hidden");
+        scheduleTable.classList.add("hidden");
+        try {
+          const response = await fetch(API_CITIES);
+          if (!response.ok) throw new Error("Gagal mengambil data kota");
+          const result = await response.json();
+          if (result.status) {
+            cities = result.data;
+            populateCityDropdown();
+            rotateCity();
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          loadingState.classList.add("hidden");
+        }
+      }
+
+      function populateCityDropdown() {
+        citySelect.innerHTML = '<option value="">-- Pilih Kota --</option>';
+        const provinces = {};
+        cities.forEach((city) => {
+          if (!provinces[city.daerah]) provinces[city.daerah] = [];
+          provinces[city.daerah].push(city);
+        });
+        Object.keys(provinces)
+          .sort()
+          .forEach((province) => {
+            const optgroup = document.createElement("optgroup");
+            optgroup.label = province;
+            provinces[province]
+              .sort((a, b) => a.lokasi.localeCompare(b.lokasi))
+              .forEach((city) => {
+                const option = document.createElement("option");
+                option.value = city.id;
+                option.textContent = city.lokasi;
+                optgroup.appendChild(option);
+              });
+            citySelect.appendChild(optgroup);
+          });
+      }
+
+      let autoRotateTimer = null;
+      let autoRotateCountdown = 30;
+
+      function rotateCity() {
+        if (cities.length === 0) return;
+        const randomIndex = Math.floor(Math.random() * cities.length);
+        const randomCity = cities[randomIndex];
+        currentCityId = randomCity.id;
+        citySelect.value = randomCity.id;
+        loadSchedule(randomCity.id);
+      }
+
+      async function handleCityChange() {
+        const cityId = citySelect.value;
+        if (!cityId) return;
+        stopAutoRotate();
+        currentCityId = cityId;
+        const selectedCity = cities.find((c) => c.id === cityId);
+        if (selectedCity) {
+          scheduleLocation.textContent = `${selectedCity.lokasi}, Indonesia`;
+          metaLocation.textContent = selectedCity.lokasi;
+        }
+        await loadSchedule(cityId);
+        showNotification(
+          "Kota Diubah",
+          `Menampilkan ${selectedCity.lokasi}`,
+          "success"
+        );
+        setTimeout(startAutoRotate, 30000);
+      }
+
+      function startAutoRotate() {
+        autoRotateCountdown = 30;
+        autoRotateTimer = setInterval(() => {
+          autoRotateCountdown--;
+          if (autoRotateCountdown <= 0) {
+            rotateCity();
+            autoRotateCountdown = 30;
+          }
+        }, 1000);
+      }
+
+      function stopAutoRotate() {
+        if (autoRotateTimer) {
+          clearInterval(autoRotateTimer);
+          autoRotateTimer = null;
+        }
+      }
+
+      async function loadSchedule(cityId) {
+        loadingState.classList.remove("hidden");
+        scheduleTable.classList.add("hidden");
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        try {
+          const response = await fetch(
+            `${API_BASE}/sholat/jadwal/${cityId}/${year}/${month}`
+          );
+          if (!response.ok) throw new Error("Gagal mengambil jadwal");
+          const result = await response.json();
+          if (result.status) {
+            currentSchedule = result.data;
+            renderSchedule(result.data);
+            updatePrayerCards(result.data);
+            loadingState.classList.add("hidden");
+            scheduleTable.classList.remove("hidden");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          loadingState.classList.add("hidden");
+        }
+      }
+
+      function renderSchedule(data, filterDate = "") {
+        tableBody.innerHTML = "";
+        const today = new Date();
+        const todayStr = formatDate(today);
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const tomorrowStr = formatDate(tomorrow);
+        const filteredJadwal = data.jadwal.filter((item) => {
+          if (!filterDate) return true;
+          return item.tanggal.toLowerCase().includes(filterDate.toLowerCase());
+        });
+        filteredJadwal.forEach((item) => {
+          const row = document.createElement("tr");
+          const isToday = item.date === todayStr;
+          const isTomorrow = item.date === tomorrowStr;
+          if (isToday) row.classList.add("today-row");
+          let dateDisplay = item.tanggal;
+          if (isToday)
+            dateDisplay += ` <span class="today-badge">Hari Ini</span>`;
+          if (isTomorrow)
+            dateDisplay += ` <span class="today-badge" style="background: var(--gradient-secondary)">Besok</span>`;
+          row.innerHTML = `
+                    <td>${dateDisplay}</td>
+                    <td class="time-cell">${item.imsak}</td>
+                    <td class="time-cell">${item.subuh}</td>
+                    <td class="time-cell ${isToday ? "current" : ""}">${
+            item.dzuhur
+          }</td>
+                    <td class="time-cell">${item.ashar}</td>
+                    <td class="time-cell">${item.maghrib}</td>
+                    <td class="time-cell">${item.isya}</td>
+                `;
+          tableBody.appendChild(row);
+        });
+      }
+
+      function updatePrayerCards(data) {
+        const today = new Date();
+        const todayStr = formatDate(today);
+        const todaySchedule = data.jadwal.find(
+          (item) => item.date === todayStr
+        );
+        if (todaySchedule) {
+          prayerTimes.imsak.textContent = todaySchedule.imsak;
+          prayerTimes.subuh.textContent = todaySchedule.subuh;
+          prayerTimes.dzuhur.textContent = todaySchedule.dzuhur;
+          prayerTimes.ashar.textContent = todaySchedule.ashar;
+          prayerTimes.maghrib.textContent = todaySchedule.maghrib;
+          prayerTimes.isya.textContent = todaySchedule.isya;
+          highlightNextPrayer(todaySchedule);
+        }
+      }
+
+      function highlightNextPrayer(schedule) {
+        const prayerOrder = [
+          "imsak",
+          "subuh",
+          "dzuhur",
+          "ashar",
+          "maghrib",
+          "isya",
+        ];
+        const prayerNames = {
+          imsak: "Imsak",
+          subuh: "Subuh",
+          dzuhur: "Dzuhur",
+          ashar: "Ashar",
+          maghrib: "Maghrib",
+          isya: "Isya",
+        };
+        const now = new Date();
+        const currentTime = now.getHours() * 60 + now.getMinutes();
+        document
+          .querySelectorAll(".prayer-item")
+          .forEach((item) => item.classList.remove("active"));
+        let found = false;
+        for (let prayer of prayerOrder) {
+          const [hours, minutes] = schedule[prayer].split(":").map(Number);
+          const prayerTime = hours * 60 + minutes;
+          if (prayerTime > currentTime) {
+            nextPrayerName.textContent = `Sholat ${prayerNames[prayer]}`;
+            nextPrayerTime.textContent = schedule[prayer];
+            const prayerItem = document
+              .querySelector(
+                `#time${prayer.charAt(0).toUpperCase() + prayer.slice(1)}`
+              )
+              ?.closest(".prayer-item");
+            if (prayerItem) prayerItem.classList.add("active");
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          nextPrayerName.textContent = "Sholat Subuh";
+          nextPrayerTime.textContent = schedule.subuh;
+        }
+      }
+
+      function startCountdown() {
+        setInterval(() => {
+          if (currentSchedule) updateCountdown();
+        }, 1000);
+      }
+
+      function updateCountdown() {
+        const prayerOrder = ["subuh", "dzuhur", "ashar", "maghrib", "isya"];
+        const now = new Date();
+        const currentTime =
+          now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60;
+        const today = new Date();
+        const todayStr = formatDate(today);
+        const todaySchedule = currentSchedule.jadwal.find(
+          (item) => item.date === todayStr
+        );
+        if (!todaySchedule) return;
+        let nextTime = null;
+        for (let prayer of prayerOrder) {
+          const [hours, minutes] = todaySchedule[prayer].split(":").map(Number);
+          const prayerTime = hours * 60 + minutes / 60;
+          if (prayerTime > currentTime) {
+            nextTime = prayerTime;
+            break;
+          }
+        }
+        if (!nextTime) {
+          const [hours, minutes] = todaySchedule.subuh.split(":").map(Number);
+          nextTime = hours * 60 + minutes / 60 + 24 * 60;
+        }
+        const diff = nextTime - currentTime;
+        const hours = Math.floor(diff / 60);
+        const minutes = Math.floor(diff % 60);
+        const seconds = Math.floor((diff % 1) * 60);
+        countdownHours.textContent = String(hours).padStart(2, "0");
+        countdownMinutes.textContent = String(minutes).padStart(2, "0");
+        countdownSeconds.textContent = String(seconds).padStart(2, "0");
+      }
+
+      function formatDate(date) {
+        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(
+          2,
+          "0"
+        )}-${String(date.getDate()).padStart(2, "0")}`;
+      }
+
+      function handleRetry() {
+        if (currentCityId) loadSchedule(currentCityId);
+        else loadCities();
+      }
+
+      async function requestNotificationPermission() {
+        if (!("Notification" in window)) {
+          showNotification("Notifikasi", "Browser tidak mendukung", "warning");
+          return;
+        }
+        const permission = await Notification.requestPermission();
+        if (permission === "granted") {
+          showNotification("Notifikasi", "Diaktifkan", "success");
+        }
+      }
+
+      function handleSearch() {
+        const searchTerm = searchDate.value.trim();
+        if (currentSchedule) {
+          renderSchedule(currentSchedule, searchTerm);
+        }
+      }
+
+      function handleExport() {
+        if (!currentSchedule) {
+          showNotification(
+            "Export",
+            "Tidak ada data untuk diekspor",
+            "warning"
+          );
+          return;
+        }
+        const months = [
+          "Januari",
+          "Februari",
+          "Maret",
+          "April",
+          "Mei",
+          "Juni",
+          "Juli",
+          "Agustus",
+          "September",
+          "Oktober",
+          "November",
+          "Desember",
+        ];
+        const now = new Date();
+        const monthName = months[now.getMonth()];
+        const year = now.getFullYear();
+        let csvContent = "text/csv;charset=utf-8,";
+        csvContent += "Tanggal,Imsak,Subuh,Dzuhur,Ashar,Maghrib,Isya\n";
+        currentSchedule.jadwal.forEach((item) => {
+          csvContent += `${item.tanggal},${item.imsak},${item.subuh},${item.dzuhur},${item.ashar},${item.maghrib},${item.isya}\n`;
+        });
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute(
+          "download",
+          `Jadwal_Imsakiyah_${monthName}_${year}.csv`
+        );
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        showNotification("Export", "Jadwal berhasil diunduh", "success");
+      }
+
+      // Sidebar
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+        const hamburger = document.querySelector(".hamburger");
+        if (sidebar && overlay && hamburger) {
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
+          hamburger.classList.toggle("active");
+          if (sidebar.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "";
+          }
+        }
+      }
+
+      document.querySelectorAll(".sidebar-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggleSidebar();
+        });
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          toggleSidebar();
+        }
+      });
+    </script>
+  </body>
+</html>
