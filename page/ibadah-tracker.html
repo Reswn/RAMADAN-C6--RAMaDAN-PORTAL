@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ramadhan To-Do List - Dashboard</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/@fontsource/poppins@4.5.0/index.css"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
+    <link rel="stylesheet" href="/css/style.css" />
     <style>
       :root {
         /* Ramadhan Space Colors */
@@ -1654,8 +1655,9 @@
         </div>
       </header>
 
-      <!-- Left Sidebar -->
+      <!-- ==================== SIDEBAR ==================== -->
       <aside class="left-sidebar" id="leftSidebar">
+        <!-- Greeting Section -->
         <div class="sidebar-greeting-section">
           <div class="sidebar-greeting-icon" id="greetingIcon">
             <i class="bi bi-moon-stars-fill icon-primary"></i>
@@ -1666,6 +1668,68 @@
           <p class="sidebar-greeting-text">Mari selesaikan ibadah hari ini!</p>
         </div>
 
+        <!-- Navigation Menu (Menggunakan DIV biasa) -->
+        <!-- <div class="sidebar-menu">
+          <div class="nav-item">
+            <a href="/index.html" class="sidebar-nav-link">
+              <i class="bi bi-house"></i>
+              <span>Beranda</span>
+            </a>
+          </div>
+          <div class="nav-item">
+            <a
+              href="#"
+              class="sidebar-nav-link"
+              onclick="switchPage('dashboard', event)"
+            >
+              <i class="bi bi-grid-fill icon-green"></i>
+              <span>Dashboard</span>
+            </a>
+          </div>
+          <div class="nav-item">
+            <a
+              href="#"
+              class="sidebar-nav-link"
+              onclick="switchPage('shalat', event)"
+            >
+              <i class="bi bi-star-fill icon-green"></i>
+              <span>Shalat</span>
+            </a>
+          </div>
+          <div class="nav-item">
+            <a
+              href="#"
+              class="sidebar-nav-link"
+              onclick="switchPage('quran', event)"
+            >
+              <i class="bi bi-journal-bookmark-fill icon-blue"></i>
+              <span>Qur'an</span>
+            </a>
+          </div>
+          <div class="nav-item">
+            <a
+              href="#"
+              class="sidebar-nav-link"
+              onclick="switchPage('puasa', event)"
+            >
+              <i class="bi bi-moon-stars-fill icon-gold"></i>
+              <span>Puasa</span>
+              <span class="sidebar-nav-badge">30</span>
+            </a>
+          </div>
+          <div class="nav-item">
+            <a
+              href="#"
+              class="sidebar-nav-link"
+              onclick="switchPage('dzikir', event)"
+            >
+              <i class="bi bi-hand-thumbs-up-fill icon-pink"></i>
+              <span>Dzikir</span>
+            </a>
+          </div>
+        </div> -->
+
+        <!-- Progress Section -->
         <div class="sidebar-progress-section">
           <div class="sidebar-progress-card">
             <div class="sidebar-progress-value" id="sidebarProgress">0%</div>
@@ -1679,6 +1743,7 @@
           </div>
         </div>
 
+        <!-- Motivation Section -->
         <div class="sidebar-motivation-section">
           <div class="sidebar-motivation-card">
             <div class="sidebar-motivation-icon">
@@ -1692,6 +1757,14 @@
               <span>Belum optimal</span>
             </div>
           </div>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <div class="sidebar-dark-mode">
+          <button class="btn-dark-mode-sidebar" onclick="toggleTheme()">
+            <i class="bi bi-moon-fill" id="sidebarThemeIcon"></i>
+            <span>Mode Gelap</span>
+          </button>
         </div>
       </aside>
 
@@ -2446,21 +2519,44 @@
       let quranReminderSent = false;
       let lastNotificationMinute = -1;
 
-      // Calculate Ramadhan Day
+      // ==================== Calculate Ramadhan Day 2026 ====================
       function calculateRamadhanDay() {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
-        const ramadhanStart = new Date(2025, 2, 1);
+
+        // Ramadhan 2026 dimulai sekitar 17-18 Februari 2026 (1 Ramadhan 1447 H)
+        const ramadhanStart = new Date(2026, 1, 17); // 17 Februari 2026
         ramadhanStart.setHours(0, 0, 0, 0);
+
         const diffTime = today - ramadhanStart;
         const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
         let day = diffDays + 1;
+
+        // Clamp antara 1-30
         if (day < 1) day = 1;
         if (day > 30) day = 30;
+
         return day;
       }
 
-      let ramadhanDay = Math.min(calculateRamadhanDay(), 30);
+      let ramadhanDay = calculateRamadhanDay();
+
+      // ==================== AUTO CHECK PREVIOUS DAYS ====================
+      function autoCheckPreviousDays() {
+        // Auto-check all days before today (hari 1 sampai hari sebelum hari ini)
+        for (let i = 0; i < ramadhanDay - 1; i++) {
+          if (i >= 0 && i < 30) {
+            puasaData.days[i] = true;
+          }
+        }
+
+        // Set today as completed by default (user can uncheck if needed)
+        const todayIndex = ramadhanDay - 1;
+        if (todayIndex >= 0 && todayIndex < 30) {
+          puasaData.days[todayIndex] = true;
+          puasaData.today = true;
+        }
+      }
 
       // Initialize
       document.addEventListener("DOMContentLoaded", function () {
@@ -2756,7 +2852,7 @@
         checkStreakUpdate();
       }
 
-      // Today Fast Toggle
+      // ==================== Today Fast Toggle ====================
       function toggleTodayFast(el) {
         if (el.classList.contains("completed")) {
           if (
@@ -2766,13 +2862,16 @@
           ) {
             el.classList.remove("completed");
             puasaData.today = false;
-            const today = ramadhanDay - 1;
-            if (today >= 0 && today < 30) {
-              puasaData.days[today] = false;
+
+            const todayIndex = ramadhanDay - 1;
+            if (todayIndex >= 0 && todayIndex < 30) {
+              puasaData.days[todayIndex] = false;
             }
+
             updatePuasaProgress();
             updateOverallProgress();
             generateRamadhanCalendar();
+            saveToStorage();
           }
           return;
         }
@@ -2781,14 +2880,17 @@
         }
         el.classList.add("completed");
         puasaData.today = true;
-        const today = ramadhanDay - 1;
-        if (today >= 0 && today < 30) {
-          puasaData.days[today] = true;
+
+        const todayIndex = ramadhanDay - 1;
+        if (todayIndex >= 0 && todayIndex < 30) {
+          puasaData.days[todayIndex] = true;
         }
+
         updatePuasaProgress();
         updateOverallProgress();
         generateRamadhanCalendar();
         checkStreakUpdate();
+        saveToStorage();
       }
 
       // Ramadhan Calendar
@@ -2804,6 +2906,7 @@
         updatePuasaProgress();
         updateOverallProgress();
         generateRamadhanCalendar();
+        saveToStorage();
       }
 
       function generateRamadhanCalendar() {
@@ -3255,7 +3358,17 @@
           document.getElementById("quranTarget").value = quranData.target;
           document.getElementById("quranRead").value = quranData.read;
         }
-        if (savedPuasa) puasaData = JSON.parse(savedPuasa);
+        if (savedPuasa) {
+          puasaData = JSON.parse(savedPuasa);
+          // PERBAIKAN: Auto-check previous days only if no manual data exists
+          const hasManualData = puasaData.days.some((day) => day === true);
+          if (!hasManualData) {
+            autoCheckPreviousDays();
+          }
+        } else {
+          // No saved data, auto-check previous days
+          autoCheckPreviousDays();
+        }
         if (savedDzikir) dzikirData = JSON.parse(savedDzikir);
         if (savedStreak) streakData = JSON.parse(savedStreak);
         if (savedDay) ramadhanDay = parseInt(savedDay);
