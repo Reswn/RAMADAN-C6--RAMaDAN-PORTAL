@@ -4,13 +4,15 @@
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)]()
 
+![Ramadhan Space](https://github.com/Reswn/img-healingku/blob/main/Landing%20Page%20RAMADAN%20SPACE.png?raw=true)
+
 **Ramadhan Space** adalah portal ibadah digital modern yang dirancang untuk menemani perjalanan spiritual umat Muslim selama bulan suci Ramadhan 1447 H / 2026 M. Platform ini menyediakan berbagai fitur terlengkap dalam satu halaman, mulai dari jadwal imsakiyah real-time, kumpulan doa, penghitung zikir, kalkulator zakat, hingga artikel islami inspiratif.
 
 Dibangun dengan pendekatan *mobile-first* dan desain antarmuka yang estetis, Ramadhan Space bertujuan membuat ibadah menjadi lebih terorganisir, konsisten, dan khusyuk.
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 ### Dashboard & Navigasi
 - **Desain Responsif:** Tampilan optimal di Desktop, Tablet, dan Mobile.
@@ -33,7 +35,7 @@ Dibangun dengan pendekatan *mobile-first* dan desain antarmuka yang estetis, Ram
 - **Tips Kesehatan:** Panduan menjaga stamina tubuh selama berpuasa.
 
 ---
-## 📖 Cara Pakai
+##  Cara Pakai
 
 ### 1. Akses Website
 Anda dapat mengakses Ramadhan Space melalui dua cara:
@@ -187,7 +189,7 @@ Catat dan pantau progress ibadah harian Anda selama Ramadhan.
 
 ---
 
-#### 📰 **Artikel Islami**
+#### **Artikel Islami**
 Baca artikel tentang keutamaan Ramadhan, tips kesehatan, dan kisah teladan.
 
 **Cara Menggunakan:**
@@ -306,15 +308,42 @@ Proyek ini dibangun menggunakan teknologi web standar yang ringan dan cepat:
 
 ---
 
-
-### 2. Buka File
+## Buka File
 Anda tidak perlu menginstall server khusus. Cukup buka file `index.html` langsung di browser Anda (Chrome, Firefox, Edge, dll).
+## Cara Menjalankan Project di Local
 
-Atau jika menggunakan VS Code, gunakan ekstensi **Live Server**:
-1. Klik kanan pada `index.html`.
-2. Pilih "Open with Live Server".
+Ikuti langkah berikut untuk menjalankan project ini di komputer Anda.
 
-### 3. Struktur Folder
+#### 1. Clone Repository
+Buka terminal atau Git Bash, lalu jalankan:
+
+git clone https://github.com/Reswn/RAMADAN-C6--RAMaDAN-PORTAL.git
+
+#### 2. Masuk ke Folder Project
+
+cd RAMADAN-C6--RAMaDAN-PORTAL
+
+#### 3. Jalankan Project
+
+Karena project ini menggunakan HTML, CSS, dan JavaScript murni, Anda tidak perlu menginstall server tambahan.
+
+Cukup buka file:
+
+index.html
+
+di browser seperti Chrome, Edge, atau Firefox.
+
+#### 4. (Opsional) Menggunakan Live Server di VS Code
+
+Jika menggunakan Visual Studio Code:
+
+1. Install ekstensi **Live Server**
+2. Klik kanan pada file `index.html`
+3. Pilih **Open with Live Server**
+
+Website akan terbuka otomatis di browser dan akan **auto refresh** setiap ada perubahan kode.
+
+## Struktur Folder
 ```text
 ramadhan-space/
 ├── assets/             # Gambar dan ikon
@@ -333,7 +362,7 @@ ramadhan-space/
 
 ---
 
-## 🎨 Desain & UI/UX
+## Desain & UI/UX
 
 Proyek ini mengutamakan pengalaman pengguna yang tenang dan fokus:
 - **Palet Warna:** Dominasi hijau emerald (`#10b981`) dan emas (`#f59e0b`) yang melambangkan ketenangan dan kemuliaan Ramadhan.
