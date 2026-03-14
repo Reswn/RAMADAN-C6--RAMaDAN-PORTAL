@@ -362,8 +362,3 @@ Jika proyek ini bermanfaat bagi Anda, silakan berikan ⭐ **Star** pada reposito
 
 > *"Semoga ibadah Ramadhan kita tahun ini diterima oleh Allah SWT dan menjadi Ramadhan terbaik dalam hidup kita."*
 ```
-
-### Tips Tambahan untuk Anda:
-1.  **Screenshot:** Ambil tangkapan layar website Anda (tampilan desktop dan mobile), simpan di folder `assets`, lalu update bagian `![Light Mode]...` di atas dengan nama file gambar yang benar.
-2.  **Link GitHub:** Ganti `https://github.com/username-anda/ramadhan-space.git` dengan link repository GitHub asli Anda jika sudah ada.
-3.  **Deploy:** Karena Anda sudah memiliki link Vercel, pastikan setiap kali ada perubahan kode, Anda melakukan *push* ke GitHub agar Vercel melakukan update otomatis (jika terhubung).
